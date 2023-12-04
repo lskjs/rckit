@@ -1,33 +1,20 @@
 {
-  "version": "2.7.4",
-  "packages": [
-    "packages/*"
-  ],
+  "version": "4.0.0",
+  "npmClient": "pnpm",
+  "useWorkspaces": true,
   "command": {
-    "version": {
+    "publish": {
       "allowBranch": [
         "master",
         "beta"
       ],
-      "exact": true,
       "conventionalCommits": true,
-      "conventionalPrerelease": false,
-      "message": "chore(release): %s"
-    },
-    "publish": {
-      "exact": true,
-      "conventionalCommits": true,
-      "conventionalPrerelease": false,
       "ignoreChanges": [
-        "**/dist/**",
-        "**/build/**",
-        "**/release/**",
-        "**/*.md",
-        "**/example/**",
-        "**/examples/**",
-        "**/test/**",
-        "**/tests/**"
-      ]
+        "ignored-file",
+        "pnpm-lock.yaml",
+        "*.md"
+      ],
+      "message": "chore(release): 🎉 publish %s"
     }
   }
 }

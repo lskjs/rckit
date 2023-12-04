@@ -1,47 +1,44 @@
 {
-  "version": "2.22.2",
-  "name": "@lskjs/cli-sample",
-  "description": "LSK.js – command line interface scripts",
-  "author": "Igor Suvorov <hi@isuvorov.com>",
-  "license": "MIT",
-  "repository": "https://github.com/lskjs/cli",
-  "keywords": [
-    "lskjs",
-    "cli",
-    "scripts"
-  ],
+  "name": "@rckit/root",
+  "version": "4.0.0",
+  "type": "module",
+  "description": "RcKit - React componets collection for fast development of web applications",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
   "scripts": {
-    "start": "lsk run start",
-    "bootstrap": "lsk run bootstrap",
-    "dev": "lsk run dev",
-    "release": "lsk run release",
-    "release:yes": "lsk run release -- --yes",
-    "i18": "lsk run i18",
-    "build": "lsk run build",
-    "test": "lsk run test"
-  },
-  "dependencies": {
-    "@babel/cli": "7.14.8",
-    "@babel/core": "7.15.0",
-    "@lskjs/babel-preset": "0.6.0",
-    "@lskjs/cli": "2.28.0",
-    "babel-jest": "27.0.6",
-    "babel-loader": "8.2.2",
-    "lerna": "4.0.0",
-    "typescript": "4.3.5",
-    "webpack": "5.50.0",
-    "webpack-dev-server": "3.11.2"
+    "start": "          ycmd start",
+    "dev": "            ycmd dev",
+    "build": "          ycmd build",
+    "test": "           ycmd test",
+    "prepack": "        ycmd prepack",
+    "release": "        ycmd release"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "13.1.0",
-    "@lskjs/eslint-config": "2.2.0",
-    "@lskjs/utils": "2.5.0",
-    "@types/react": "^17.0.17",
-    "babel-eslint": "10.1.0",
-    "babel-plugin-emotion": "^10.2.2",
-    "eslint": "7.32.0",
-    "husky": "7.0.1",
-    "jest": "27.0.6",
-    "prettier": "2.3.2"
-  }
+    "@lsk4/eslint-config": "^4.0.1",
+    "@lsk4/tsconfig": "^4.0.3",
+    "@lsk4/tsup-config": "^4.0.2",
+    "typescript": "^5.3.2",
+    "ycmd": "^0.10.0"
+  },
+  "//": "///////////========================/////////========================/////////========================/////////",
+  "prettier": "@lsk4/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lsk4/eslint-config"
+  },
+  "ycmd": {
+    "scripts": [
+      "./scripts",
+      "./node_modules/ycmd/scripts"
+    ]
+  },
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/nestlib",
+  "homepage": "https://github.com/lskjs/nestlib",
+  "bugs": "https://github.com/lskjs/nestlib/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "////": "/////////========================/////////========================/////////========================/////////"
 }
