@@ -1,7 +1,11 @@
 import React from 'react';
 import { useHeadMeta } from './useHeadMeta';
 
-export const HeadMeta = ({ title }: { title: string }) => {
+type HeadMetaProps = {
+  title: string;
+};
+
+export const HeadMeta = ({ title }: HeadMetaProps) => {
   const metaElements = useHeadMeta({ title });
   return (
     <>
