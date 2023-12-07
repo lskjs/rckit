@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/lskjs/rckit/compare/v4.1.0...v4.2.0) (2023-12-07)
+
+
+### Features
+
+* **meta:** add HeadEnv component ([70b20ad](https://github.com/lskjs/rckit/commit/70b20ad5bc5530614d89ec32437dce74efc70458))
+
+
+
+
+
 # [4.1.0](https://github.com/lskjs/rckit/compare/v2.7.4...v4.1.0) (2023-12-07)
 
 
