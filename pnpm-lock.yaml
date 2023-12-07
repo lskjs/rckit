@@ -9,14 +9,14 @@ importers:
   .:
     devDependencies:
       '@lsk4/eslint-config':
-        specifier: ^4.0.1
-        version: 4.0.2
+        specifier: ^4.1.0
+        version: 4.1.0
       '@lsk4/tsconfig':
-        specifier: ^4.0.3
-        version: 4.0.3
+        specifier: ^4.1.0
+        version: 4.1.0
       '@lsk4/tsup-config':
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^4.1.0
+        version: 4.1.0
       typescript:
         specifier: ^5.3.2
         version: 5.3.2
@@ -27,8 +27,8 @@ importers:
   libs/debug:
     dependencies:
       '@lsk4/env':
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^4.1.0
+        version: 4.1.0
     devDependencies:
       '@types/react':
         specifier: ^18.2.41
@@ -512,27 +512,33 @@ packages:
       - supports-color
     dev: true
 
-  /@lsk4/algos@4.0.2:
-    resolution: {integrity: sha512-pnFf2H+XXau4rgllDH8dpuzI3z015Fe8BfATNofRn6Kv8NahMGDbv/vhOHbWFjIS0BxoWD37jYfA+N91txom1A==}
+  /@lsk4/algos@4.1.0:
+    resolution: {integrity: sha512-CwCP0fWu6qRPtYpzTIakcytpr+8nnVHFSL8HbRsVCrw8a3i1vOacdlliWijMwzB22EHB2oua1HODzGWr7LlJYA==}
     dev: true
 
-  /@lsk4/colors@4.0.2:
-    resolution: {integrity: sha512-eYodzAYznFHwAb/FdYM+nAcu00IJnWNaszdS6mFmtWv3/E8zBWbIo/JH2Q0o9haQYwuyyvXtr3laQfDvge6RfA==}
+  /@lsk4/colors@4.1.0:
+    resolution: {integrity: sha512-qryr9/pLCdDgOsAuxNN/95YQLjP8p026nMfarZMOu7N6d1u65zFFveJjB/oQc+P+RZ++mdRrs3FR7mBCS8/w9w==}
     dependencies:
-      '@lsk4/env': 4.0.2
+      '@lsk4/env': 4.1.0
     dev: true
 
-  /@lsk4/env@4.0.2:
-    resolution: {integrity: sha512-Tj1q7dMWUonYBrAb46wuc32ocjqiuPg0dFagHPfNwGd6UfibHeORs+QqwDSRvwebEvJXxq2LW/W33codHPhhDg==}
+  /@lsk4/env@4.1.0:
+    resolution: {integrity: sha512-jWoxyJSN9ShST/D2ZCGw0b35REEvsrIGNv1IWaRaP6+ZVv3gl3hOgOObVz15MMSQMVH5ShZi70l1Y7iNXcH5RQ==}
 
   /@lsk4/err@4.0.2:
     resolution: {integrity: sha512-cGZApQZv+0gRTJxs8A82PYLS2De+K8i3KnQ+NB9UMwkUdvwCaMSD+XuONHIf8SdrzDDey83tScLbsoKdizLNag==}
     dependencies:
-      '@lsk4/algos': 4.0.2
+      '@lsk4/algos': 4.1.0
     dev: true
 
-  /@lsk4/eslint-config@4.0.2:
-    resolution: {integrity: sha512-xvDiICzyKYcmsXdAbN0A3F69lNWuFX6a1z+kqSezxVDTjGu2QgJvBSjjqSmRry4m9HDtmU5bEuRBR9uAWx3DNQ==}
+  /@lsk4/err@4.1.0:
+    resolution: {integrity: sha512-B1AdKOQVOAwO2zRktBk0D4xclQxUQ8/Cmi04dFFIHejnrnb8jwEvGpcinDsPUB8yJvcvH69wB5IbCoiGy9tgag==}
+    dependencies:
+      '@lsk4/algos': 4.1.0
+    dev: true
+
+  /@lsk4/eslint-config@4.1.0:
+    resolution: {integrity: sha512-1uo74dfBrj2YeLF9UzttcAZtX0SdhUEaCeb+MrNkMH9Gwb2fNA8MGSowTeKK9UITkpMZWYa6nxtGWjr/3EBrnA==}
     dependencies:
       '@typescript-eslint/eslint-plugin': 6.7.5(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2)
       '@typescript-eslint/parser': 6.7.5(eslint@8.51.0)(typescript@5.3.2)
@@ -559,14 +565,14 @@ packages:
       - supports-color
     dev: true
 
-  /@lsk4/log@4.0.2:
-    resolution: {integrity: sha512-mfpb3/tBISr7YeXZBdFOwFlVAc2Bqk9Rw/L0I/MXIkEhSGbnCn1h/4SYVLSJOcOTtJnfcAP1oul/BvptX+8qhQ==}
+  /@lsk4/log@4.1.0:
+    resolution: {integrity: sha512-QPW45Wh8QIgJMI8IkW7beyNC28JWEUSUOHBvXFWNHscUZCXNuXDGvQ4pd7Kn0Tnbru/kxvqgk8tdfBpG82oQvQ==}
     hasBin: true
     dependencies:
-      '@lsk4/algos': 4.0.2
-      '@lsk4/colors': 4.0.2
-      '@lsk4/env': 4.0.2
-      '@lsk4/err': 4.0.2
+      '@lsk4/algos': 4.1.0
+      '@lsk4/colors': 4.1.0
+      '@lsk4/env': 4.1.0
+      '@lsk4/err': 4.1.0
       fast-safe-stringify: 2.1.1
       pretty-bytes: 5.6.0
       pretty-time: 1.1.0
@@ -577,12 +583,12 @@ packages:
       logfmt: 1.3.2
     dev: true
 
-  /@lsk4/tsconfig@4.0.3:
-    resolution: {integrity: sha512-/mIdP0Gk1NlBvjtrp0KSXJ2+MBAOnzn8dW9eaSk3turmLx6a2lJYJimzppXbUax2yvT7qpDZDEP1aHOBPSt4Vw==}
+  /@lsk4/tsconfig@4.1.0:
+    resolution: {integrity: sha512-7u1GX5X1Wtbm+FYfRsdaVT7V3zocwWSdZSzggcOOtcJyVOVDeEgPgwT/ThVakX/yIwaASxZWw5nXk84FzDa+yQ==}
     dev: true
 
-  /@lsk4/tsup-config@4.0.2:
-    resolution: {integrity: sha512-tpZ7WT9XNhrUzIMqDlKlbsJ7J2YaPgGGJgMra5PiXtaAeiXgVbXSck5oOtg2fP/mB8ZgOz0LSPanEkpzAtX5YQ==}
+  /@lsk4/tsup-config@4.1.0:
+    resolution: {integrity: sha512-cL0JjDRJtFdip0g5nBu+ek2bniWJrOanBTbFN2UAKtCUnoaUJBG9o1UcTJr6rsLL2+0JLHdPXvGiZ0ih78MfGw==}
     dev: true
 
   /@lskjs/algos@3.18.0:
@@ -1715,7 +1721,7 @@ packages:
     peerDependencies:
       ycmd: ^0.8.0
     dependencies:
-      '@lsk4/algos': 4.0.2
+      '@lsk4/algos': 4.1.0
       '@lskjs/stringify': 3.19.0
       '@macrobe/tsup': 0.0.1(@swc/core@1.3.100)(typescript@5.3.2)
       '@swc/cli': 0.1.63(@swc/core@1.3.100)(chokidar@3.5.3)
@@ -1752,11 +1758,11 @@ packages:
   /@ycmd/helpers@0.10.0(esbuild@0.19.8):
     resolution: {integrity: sha512-jOH7TJsgSESKtXntDqKMaMBaJ5EBsbTIqomWyR1/H+zBkEGA9hhL4sKtkmgVrYoTD2ls1sW3Qq4NzZ/VjtvDEA==}
     dependencies:
-      '@lsk4/algos': 4.0.2
-      '@lsk4/colors': 4.0.2
-      '@lsk4/env': 4.0.2
-      '@lsk4/err': 4.0.2
-      '@lsk4/log': 4.0.2
+      '@lsk4/algos': 4.1.0
+      '@lsk4/colors': 4.1.0
+      '@lsk4/env': 4.1.0
+      '@lsk4/err': 4.1.0
+      '@lsk4/log': 4.1.0
       '@ycmd/utils': 0.10.0(esbuild@0.19.8)
       yargs: 17.7.2
     transitivePeerDependencies:
@@ -1788,9 +1794,9 @@ packages:
   /@ycmd/utils@0.10.0(esbuild@0.19.8):
     resolution: {integrity: sha512-umurn1krKxscClRCsgidVJUsjR/qJNaBd49tVJOiBAAPhf2OdH80e98c8pcxv4vw6/k1+/XbzGk0vhhItHNaEQ==}
     dependencies:
-      '@lsk4/env': 4.0.2
-      '@lsk4/err': 4.0.2
-      '@lsk4/log': 4.0.2
+      '@lsk4/env': 4.1.0
+      '@lsk4/err': 4.1.0
+      '@lsk4/log': 4.1.0
       bundle-require: 4.0.2(esbuild@0.19.8)
       fishbird: 1.1.8
       global-prefix: 3.0.0
@@ -8578,7 +8584,7 @@ packages:
     resolution: {integrity: sha512-G68k68Fz+wk6HwceSsYkXC/mh7JmINB1OnWeNZgD7KGmGwDRhgAso1X84q8Vs6BK0oc1IAgQwbAzMTIy9Ty0jw==}
     hasBin: true
     dependencies:
-      '@lsk4/err': 4.0.2
+      '@lsk4/err': 4.1.0
       '@ycmd/commands': 0.10.0(esbuild@0.19.8)(typescript@5.3.2)(ycmd@0.10.0)
       '@ycmd/helpers': 0.10.0(esbuild@0.19.8)
       '@ycmd/run': 0.10.0(esbuild@0.19.8)

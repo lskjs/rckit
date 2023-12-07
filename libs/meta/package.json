@@ -1,5 +1,5 @@
 {
-  "name": "@rckit/debug",
+  "name": "@rckit/meta",
   "version": "4.0.0",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
@@ -12,7 +12,6 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.41",

@@ -4,7 +4,7 @@
   "type": "module",
   "description": "RcKit - React componets collection for fast development of web applications",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "          ycmd start",
     "dev": "            ycmd dev",
@@ -14,9 +14,9 @@
     "release": "        ycmd release"
   },
   "devDependencies": {
-    "@lsk4/eslint-config": "^4.0.1",
-    "@lsk4/tsconfig": "^4.0.3",
-    "@lsk4/tsup-config": "^4.0.2",
+    "@lsk4/eslint-config": "^4.1.0",
+    "@lsk4/tsconfig": "^4.1.0",
+    "@lsk4/tsup-config": "^4.1.0",
     "typescript": "^5.3.2",
     "ycmd": "^0.10.0"
   },
@@ -32,13 +32,12 @@
     ]
   },
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/nestlib",
-  "homepage": "https://github.com/lskjs/nestlib",
-  "bugs": "https://github.com/lskjs/nestlib/issues",
+  "repository": "https://github.com/lskjs/rckit",
+  "homepage": "https://github.com/lskjs/rckit",
+  "bugs": "https://github.com/lskjs/rckit/issues",
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "access": "restricted"
   },
   "////": "/////////========================/////////========================/////////========================/////////"
 }
