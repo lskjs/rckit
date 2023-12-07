@@ -37,6 +37,15 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
 
+  libs/meta:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
