@@ -1,7 +1,7 @@
-import { Debug } from '@rckit/debug';
-import { Col, Form } from 'react-bootstrap';
-
+// import { Debug } from '@rckit/debug';
 import { FormButton, FormItem, useSmartForm } from '@rckit/form';
+import React from 'react';
+import { Col, Form } from 'react-bootstrap';
 
 export interface AuthOtpFormValues {
   code: string;
@@ -16,8 +16,8 @@ export function AuthOtpForm({ onSubmit }: AuthOtpFormProps) {
   return (
     <Form onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
-        <Debug>
-          {/* <OTPInput
+        {/* <Debug>
+          <OTPInput
             // value={otp}
             // onChange={setOtp}
             numInputs={4}
@@ -38,8 +38,8 @@ export function AuthOtpForm({ onSubmit }: AuthOtpFormProps) {
               />
             )}
             {...register('code', { required: 'Code cannot be blank' })}
-          /> */}
-        </Debug>
+          />
+        </Debug> */}
         <Col lg={12}>
           <FormItem id="code" label="Code" error={formState.errors.code?.message} required>
             <Form.Control

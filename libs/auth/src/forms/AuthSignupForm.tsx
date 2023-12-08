@@ -1,6 +1,6 @@
-import { Col, Form } from 'react-bootstrap';
-
 import { FormButton, FormItem, useSmartForm } from '@rckit/form';
+import React from 'react';
+import { Col, Form } from 'react-bootstrap';
 
 export interface AuthSignupFormValues {
   email: string;

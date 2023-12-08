@@ -1,10 +1,8 @@
-/* eslint-disable prefer-destructuring */
-import { useCallback } from 'react';
+import React, { useCallback } from 'react';
 import useLocalStorageState from 'use-local-storage-state';
 
 import { fetchAuthSession } from '../queries/authSessionQuery';
 import { Session } from '../types';
-
 // import TopupBanner from '@/components/TopupBanner/TopupBanner';
 import { AppSessionContext, AppSessionContextProps, defaultAppSession } from './useAppSession';
 

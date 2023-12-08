@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { Col, Form } from 'react-bootstrap';
-
 import { FormButton, FormItem, useSmartForm } from '@rckit/form';
+import Link from 'next/link';
+import React from 'react';
+import { Col, Form } from 'react-bootstrap';
 
 export interface AuthLoginFormValues {
   email: string;

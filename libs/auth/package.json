@@ -14,9 +14,8 @@
   "dependencies": {
     "@lsk4/env": "^4.1.0",
     "@lsk4/err": "^4.3.0",
-    "@rckit/api-client": "workspace:^",
-    "@rckit/debug": "4.1.1-alpha.1",
-    "@rckit/form": "workspace:4.1.1-alpha.2"
+    "@rckit/api-client": "^4.1.1",
+    "@rckit/form": "^4.1.1-alpha.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.41",
