@@ -9,7 +9,7 @@ export const HeadEnv = ({ isDev, ...props }: HeadEnvProps) => (
   <script
     dangerouslySetInnerHTML={{
       __html: [
-        `window.__DEV__ = ${isDev} ? 1 : 0`,
+        `window.__DEV__ = Boolean(${isDev})`,
         `window.env = ${JSON.stringify({ isDev, ...props })}`,
       ]
         .filter(Boolean)
