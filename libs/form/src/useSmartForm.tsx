@@ -1,4 +1,5 @@
 import { Err } from '@lsk4/err';
+import React from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
 
 type UseSmartFormProps = {
@@ -6,6 +7,7 @@ type UseSmartFormProps = {
 };
 
 export const useSmartForm = <T extends FieldValues>({ onSubmit, ...props }: UseSmartFormProps) => {
+  console.log({ useForm, React });
   const { register, handleSubmit, formState, setError, clearErrors, ...other } = useForm<T>(props);
   async function onWrappedSubmit(values: T) {
     if (formState.isSubmitting) return;

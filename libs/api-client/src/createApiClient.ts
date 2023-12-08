@@ -12,7 +12,6 @@ const log = createLogger('api');
 export function createApiClient({ baseURL }: { baseURL?: string } = {}): ApiClient {
   // eslint-disable-next-line no-nested-ternary
   // const baseURL = isServer ? '???????????? serverBaseURL ??????????????' : null; // isDev ? '/' : clientBaseURL;
-  if (isServer && !baseURL) throw new Err('!baseURL', 'baseURL is required on server');
 
   // console.log({ baseURL });
   const instance = axios.create(
@@ -22,6 +21,18 @@ export function createApiClient({ baseURL }: { baseURL?: string } = {}): ApiClie
       headers: isServer ? { Accept: 'application/json', 'Accept-Encoding': 'identity' } : null,
     }),
   ) as ApiClient;
+
+  instance.interceptors.request.use(
+    (config) => {
+      log.debug('[req]', config.url, config.params, config.data);
+      if (isServer && !baseURL) throw new Err('!baseURL', 'baseURL is required on server');
+      return config;
+    },
+    (err) => {
+      log.error('[req err]', err);
+      return err;
+    },
+  );
 
   instance.interceptors.response.use(
     (response) => {
