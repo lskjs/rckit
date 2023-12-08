@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/lskjs/lskjs/compare/v4.2.0...v4.3.0) (2023-12-08)
+
+
+### Features
+
+* add secret checkbox ([97e0eb8](https://github.com/lskjs/lskjs/commit/97e0eb822c275d91486b276896b29ddb5c1670cc))
+
+
+
+
+
 # [4.2.0](https://github.com/lskjs/lskjs/compare/v4.1.0...v4.2.0) (2023-12-07)
 
 
