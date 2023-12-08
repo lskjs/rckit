@@ -1,7 +1,7 @@
 /* eslint-disable prefer-destructuring */
 import { createContext, Dispatch, SetStateAction, useContext } from 'react';
 
-import { Session } from '@/rckit/auth/types';
+import { Session } from '../types';
 
 export interface AppSessionType {
   sessionId?: string;
