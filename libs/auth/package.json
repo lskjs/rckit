@@ -1,0 +1,76 @@
+{
+  "name": "@rckit/auth",
+  "version": "4.1.0",
+  "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
+  "scripts": {
+    "dev": "            ycmd dev",
+    "build": "          ycmd build",
+    "test": "           ycmd test",
+    "prepack": "        ycmd prepack",
+    "release": "        ycmd release"
+  },
+  "dependencies": {
+    "@lsk4/env": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.41",
+    "react-bootstrap": "^2.9.1",
+    "use-local-storage-state": "^19.1.0",
+    "next": "^14.0.4",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "next": "^14.0.4",
+    "use-local-storage-state": "^19.1.0",
+    "react-bootstrap": "^2.9.1",
+    "react": "^18.2.0"
+  },
+  "//": "///////////========================/////////========================/////////========================//////////",
+  "prettier": "@lsk4/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lsk4/eslint-config"
+  },
+  "files": [
+    "cjs",
+    "lib",
+    "README.md",
+    "LICENCE"
+  ],
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./cjs/index.d.ts",
+      "default": "./cjs/index.js"
+    },
+    "./*": {
+      "import": "./lib/*.js",
+      "types": "./cjs/*.d.ts",
+      "default": "./cjs/*.js"
+    }
+  },
+  "_size-limit": [
+    {
+      "path": "lib/index.js",
+      "limit": "10kb",
+      "ignore": [
+        "util",
+        "timers",
+        "crypto"
+      ]
+    }
+  ],
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/lskjs/tree/master//libs-nest/nest-auth",
+  "homepage": "https://github.com/lskjs/lskjs/tree/master//libs/nest-auth",
+  "bugs": "https://github.com/lskjs/lskjs/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "////": "/////////========================/////////========================/////////========================/////////"
+}
