@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/lskjs/rckit/compare/v4.3.0...v4.4.0) (2023-12-08)
+
+
+### Features
+
+* **api-client:** add api client package ([3bbb353](https://github.com/lskjs/rckit/commit/3bbb353e08821786320d660907e3e7f6b4827c2a))
+
+
+
+
+
 # [4.3.0](https://github.com/lskjs/rckit/compare/v4.2.0...v4.3.0) (2023-12-08)
 
 
