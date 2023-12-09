@@ -5,6 +5,7 @@ import { ComponentContext } from './ComponentProvider';
 type LinkProps = React.HTMLProps<HTMLAnchorElement>;
 
 export const Link = (props: LinkProps) => {
-  const { Link: LinkComponent } = useContext(ComponentContext) || 'img';
+  const components = useContext(ComponentContext);
+  const LinkComponent = components?.Image || 'a';
   return <LinkComponent {...props} />;
 };

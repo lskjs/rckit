@@ -16,7 +16,7 @@
     "@lsk4/err": "^4.3.0",
     "@rckit/api-client": "^4.5.1",
     "@rckit/form": "^4.6.0",
-    "@rckit/link": "workspace:4.5.1-alpha.0"
+    "@rckit/link": "^4.5.1-alpha.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.42",

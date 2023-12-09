@@ -15,6 +15,8 @@ export const Avatar = (props: AvatarProps) => {
   const round = props.round === false || true;
   const htmlProps = omit(props as any, avatarProps);
 
+  // @ts-ignore
+  console.log({ Image });
   return (
     <div
       style={{
