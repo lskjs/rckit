@@ -1,5 +1,6 @@
 import { Err } from '@lsk4/err';
-import { apiClient as defaultApiClient, ApiClientOptions } from '@rckit/api-client';
+import type { ApiClientOptions } from '@rckit/api-client';
+import { apiClient as defaultApiClient } from '@rckit/api-client';
 
 import { Otp, Session } from '../types';
 

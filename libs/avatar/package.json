@@ -1,6 +1,6 @@
 {
-  "name": "@rckit/auth",
-  "version": "4.6.0",
+  "name": "@rckit/avatar",
+  "version": "4.5.1-alpha.2",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -12,22 +12,16 @@
     "release": "        ycmd release"
   },
   "dependencies": {
+    "@lsk4/algos": "^4.3.0",
     "@lsk4/env": "^4.1.0",
-    "@lsk4/err": "^4.3.0",
-    "@rckit/api-client": "^4.5.1",
-    "@rckit/form": "^4.6.0",
-    "@rckit/link": "workspace:4.5.1-alpha.0"
+    "@rckit/link": "workspace:4.5.1-alpha.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.42",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.9.1",
-    "use-local-storage-state": "^18.3.3"
+    "@types/react": "^18.2.41",
+    "react": "^18.2.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.9.1",
-    "use-local-storage-state": "^19.1.0"
+    "react": "^18.2.0"
   },
   "//": "///////////========================/////////========================/////////========================//////////",
   "prettier": "@lsk4/eslint-config/prettier",

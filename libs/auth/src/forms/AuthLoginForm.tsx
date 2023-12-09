@@ -1,5 +1,5 @@
 import { FormButton, FormItem, useSmartForm } from '@rckit/form';
-// import Link from 'next/link';
+import { Link } from '@rckit/link';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
@@ -27,9 +27,9 @@ export function AuthLoginForm({ onSubmit }: AuthLoginFormProps) {
       </Col>
       <Col lg={12}>
         <div className="form-text text-end" style={{ marginBottom: -22 }}>
-          <a href="/auth/restore" tabIndex={-1}>
+          <Link href="/auth/restore" tabIndex={-1}>
             Forgot password?
-          </a>
+          </Link>
         </div>
         <FormItem
           id="password"
