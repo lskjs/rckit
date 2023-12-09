@@ -3,15 +3,14 @@ import { Link } from '@rckit/link';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
-export interface AuthLoginFormValues {
+export interface AuthRestoreFormValues {
   email: string;
-  password: string;
 }
-export interface AuthLoginFormProps {
-  onSubmit: (values: AuthLoginFormValues) => Promise<void>;
+export interface AuthRestoreFormProps {
+  onSubmit: (values: AuthRestoreFormValues) => Promise<void>;
 }
-export function AuthLoginForm({ onSubmit }: AuthLoginFormProps) {
-  const { register, formState, onSmartSubmit } = useSmartForm<AuthLoginFormValues>({
+export function AuthRestoreForm({ onSubmit }: AuthRestoreFormProps) {
+  const { register, formState, onSmartSubmit } = useSmartForm<AuthRestoreFormValues>({
     onSubmit,
   });
 
@@ -26,26 +25,8 @@ export function AuthLoginForm({ onSubmit }: AuthLoginFormProps) {
         </FormItem>
       </Col>
       <Col lg={12}>
-        <div className="form-text text-end" style={{ marginBottom: -22 }}>
-          <Link href="/auth/restore" tabIndex={-1}>
-            Forgot password?
-          </Link>
-        </div>
-        <FormItem
-          id="password"
-          label="Password"
-          error={formState.errors.password?.message}
-          required
-        >
-          <Form.Control
-            type="password"
-            {...register('password', { required: 'Password cannot be black' })}
-          />
-        </FormItem>
-      </Col>
-      <Col lg={12}>
         <FormButton formState={formState} type="submit" className="w-100">
-          Sign in
+          Restore password
         </FormButton>
       </Col>
       {formState.errors.root && (

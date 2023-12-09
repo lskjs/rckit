@@ -1,4 +1,5 @@
 import { FormButton, FormItem, useSmartForm } from '@rckit/form';
+import { Link } from '@rckit/link';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
@@ -33,9 +34,9 @@ export function AuthWebappSignupForm({ onSubmit }: AuthWebappSignupFormProps) {
             label={
               <span>
                 I agree to the{' '}
-                <a href="/links/tos" target="_blank" rel="noopener noreferrer" tabIndex={-1}>
+                <Link href="/links/tos" target="_blank" rel="noopener noreferrer" tabIndex={-1}>
                   Terms of Service
-                </a>
+                </Link>
               </span>
             }
             isInvalid={Boolean(formState.errors.tos)}

@@ -23,9 +23,10 @@ const templates = {
 };
 
 export const FormButton = ({ formState, children, ...props }: any) => {
-  const status = useFormButtonState(formState);
-  const text = templates[status || 'default']?.text || children || templates.default.text;
-  const variant = templates[status || 'default']?.variant || templates.default.variant;
+  const status = useFormButtonState(formState) || 'default';
+  const template = templates[status] || templates.default;
+  const text = children || template.text || templates.default.text;
+  const variant = template?.variant || templates.default.variant;
   return (
     <ReactBootstrapButton
       disabled={status === 'progress'}
