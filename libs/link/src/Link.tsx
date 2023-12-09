@@ -6,6 +6,6 @@ type LinkProps = React.HTMLProps<HTMLAnchorElement>;
 
 export const Link = (props: LinkProps) => {
   const components = useContext(ComponentContext);
-  const LinkComponent = components?.Image || 'a';
+  const LinkComponent = components?.Link || 'a';
   return <LinkComponent {...props} />;
 };

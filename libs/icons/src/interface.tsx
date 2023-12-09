@@ -6,6 +6,8 @@ import {
   GoArrowRight,
   GoArrowUp,
   GoBell,
+  GoBellFill,
+  GoBellSlash,
   GoCalendar,
   GoCheck,
   GoClock,
@@ -37,6 +39,8 @@ import {
   GoSync,
   GoTag,
   GoTrash,
+  GoX,
+  GoXCircle,
 } from 'react-icons/go';
 
 // https://react-icons.github.io/react-icons/icons/go/
@@ -45,6 +49,8 @@ export const ArrowLeft = GoArrowLeft;
 export const ArrowDown = GoArrowDown;
 export const ArrowRight = GoArrowRight;
 export const Bell = GoBell;
+export const BellFill = GoBellFill;
+export const BellSlash = GoBellSlash;
 export const Code = GoCode;
 export const Alert = GoAlert;
 export const AlertFill = GoAlertFill;
@@ -78,3 +84,5 @@ export const Clock = GoClock;
 export const ClockFill = GoClockFill;
 export const Duplicate = GoDuplicate;
 export const Trash = GoTrash;
+export const Cross = GoX;
+export const CrossCircle = GoXCircle;
