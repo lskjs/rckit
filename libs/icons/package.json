@@ -1,6 +1,6 @@
 {
   "name": "@rckit/icons",
-  "version": "4.5.1-alpha.3",
+  "version": "4.8.0",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -12,9 +12,9 @@
     "release": "        ycmd release"
   },
   "devDependencies": {
-    "react-icons": "^4.12.0",
     "@types/react": "^18.2.41",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-icons": "^4.12.0"
   },
   "peerDependencies": {
     "react": "^18.2.0"

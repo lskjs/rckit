@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.8.0](https://github.com/lskjs/rckit/compare/v4.7.0...v4.8.0) (2023-12-09)
+
+
+### Features
+
+* add storybook beta ([b30024c](https://github.com/lskjs/rckit/commit/b30024c6dc292ab74354b785f48510dd0b9cbfc1))
+* **icon:** add icon package ([970f2f9](https://github.com/lskjs/rckit/commit/970f2f908fd564d1edf8415fc6a2db270a99a8bc))
+
+
+
+
+
 # [4.7.0](https://github.com/lskjs/rckit/compare/v4.6.0...v4.7.0) (2023-12-09)
 
 

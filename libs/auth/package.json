@@ -1,6 +1,6 @@
 {
   "name": "@rckit/auth",
-  "version": "4.7.0",
+  "version": "4.8.0",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -15,7 +15,7 @@
     "@lsk4/env": "^4.1.0",
     "@lsk4/err": "^4.3.0",
     "@rckit/api-client": "^4.5.1",
-    "@rckit/form": "^4.6.0",
+    "@rckit/form": "^4.8.0",
     "@rckit/link": "^4.7.0"
   },
   "devDependencies": {
