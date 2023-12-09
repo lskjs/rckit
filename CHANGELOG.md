@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.8.1](https://github.com/lskjs/rckit/compare/v4.8.0...v4.8.1) (2023-12-09)
+
+
+### Bug Fixes
+
+* **link:** fix link component ([7d69558](https://github.com/lskjs/rckit/commit/7d69558159902d9d27de1ff3ed35a36c8835e1e3))
+
+
+
+
+
 # [4.8.0](https://github.com/lskjs/rckit/compare/v4.7.0...v4.8.0) (2023-12-09)
 
 
