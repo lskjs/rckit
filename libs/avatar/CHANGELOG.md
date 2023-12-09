@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.7.0](https://github.com/lskjs/lskjs/compare/v4.6.0...v4.7.0) (2023-12-09)
+
+
+### Bug Fixes
+
+* component provider ([fb80921](https://github.com/lskjs/lskjs/commit/fb809216a204fd6a717bf2fcd8d16cd6dcaa4fdc))
+
+
+### Features
+
+* **avatar:** add avatar, link, auth components ([ac287c3](https://github.com/lskjs/lskjs/commit/ac287c3a625eecf82f0e4448af18fa78474abbda))
+
+
+
+
+
 # [4.5.0](https://github.com/lskjs/lskjs/compare/v4.4.0...v4.5.0) (2023-12-08)
 
 
