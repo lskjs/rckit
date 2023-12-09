@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.8.2](https://github.com/lskjs/rckit/compare/v4.8.1...v4.8.2) (2023-12-09)
+
+
+### Bug Fixes
+
+* **forms:** fix formbutton text and restore password form ([2f98984](https://github.com/lskjs/rckit/commit/2f989840e95d44e4d85dede3b70b31938723560a))
+
+
+
+
+
 ## [4.8.1](https://github.com/lskjs/rckit/compare/v4.8.0...v4.8.1) (2023-12-09)
 
 
