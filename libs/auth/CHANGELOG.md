@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.9.1](https://github.com/lskjs/lskjs/compare/v4.9.0...v4.9.1) (2023-12-10)
+
+
+### Bug Fixes
+
+* **table:** table class names ([9bb577e](https://github.com/lskjs/lskjs/commit/9bb577e1fd47fba775d35e0f8cc94da693a82157))
+
+
+
+
+
 ## [4.8.2](https://github.com/lskjs/lskjs/compare/v4.8.1...v4.8.2) (2023-12-09)
 
 
