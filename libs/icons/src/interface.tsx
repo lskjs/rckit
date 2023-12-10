@@ -86,3 +86,5 @@ export const Duplicate = GoDuplicate;
 export const Trash = GoTrash;
 export const Cross = GoX;
 export const CrossCircle = GoXCircle;
+export * from './pencil';
+export * from './dot';
