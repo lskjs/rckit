@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TableColumnWidth } from '../types';
+import { TableColumnWidth } from '../types.js';
 // import styles from './ColGroup.module.css';
 const styles = { col: 'rctbl_colgroup__col' };
 

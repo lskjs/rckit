@@ -1,7 +1,7 @@
 import { flexRender, HeaderGroup } from '@tanstack/react-table';
 import React, { Dispatch, SetStateAction } from 'react';
 
-import type { QueryParams } from '../types';
+import type { QueryParams } from '../types.js';
 import { TableHeader } from './TableHeader.js';
 
 interface THeadProps {

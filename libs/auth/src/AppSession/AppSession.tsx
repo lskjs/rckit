@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import useLocalStorageState from 'use-local-storage-state';
 
 import { fetchAuthSession } from '../queries/authSessionQuery';
-import { Session } from '../types';
+import { Session } from '../types.js';
 // import TopupBanner from '@/components/TopupBanner/TopupBanner';
 import { AppSessionContext, AppSessionContextProps, defaultAppSession } from './useAppSession';
 

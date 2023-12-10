@@ -17,9 +17,9 @@ import { TableProps } from './types';
 import { flatPages } from './utils/flatPages';
 
 const styles = {
-  wrapper: 'rctbl_table__wrapper',
-  tableWrapper: 'rctbl_table__tableWrapper',
-  filterButton: 'rctbl_table__filterButton',
+  wrapper: 'rctbl_root__wrapper',
+  tableWrapper: 'rctbl_root__tableWrapper',
+  filterButton: 'rctbl_root__filterButton',
 };
 
 const isDebug = isDev && false;

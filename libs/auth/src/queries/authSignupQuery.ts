@@ -2,7 +2,7 @@ import { Err } from '@lsk4/err';
 import type { ApiClientOptions } from '@rckit/api-client';
 import { apiClient as defaultApiClient } from '@rckit/api-client';
 
-import { Otp, Session } from '../types';
+import { Otp, Session } from '../types.js';
 
 export interface AuthSignupParams {
   email: string;
