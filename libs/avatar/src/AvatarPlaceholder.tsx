@@ -24,12 +24,20 @@ export const AvatarPlaceholder = (props: AvatarProps) => {
     .slice(0, 2)
     .join('');
   const fontSize = Math.floor(height / 2.5);
-  let className = 'd-flex justify-content-center align-items-center';
-  className += round ? ' rounded-circle' : '';
+  const className = 'd-flex justify-content-center align-items-center';
+  const style = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: round ? '50%' : 0,
+    width,
+    height,
+    fontSize,
+    backgroundColor,
+    color,
+    ...(props.style || {}),
+  };
   const htmlProps = omit(props as any, avatarProps);
-  const style = { ...(props.style || {}), width, height, fontSize, backgroundColor, color };
-  //   console.log({ style });
-  //   console.log({ placeholder, alt });
   return (
     <div className={className} {...htmlProps} style={style}>
       {placeholder}
