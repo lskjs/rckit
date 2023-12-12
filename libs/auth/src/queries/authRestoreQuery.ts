@@ -6,7 +6,6 @@ import { Otp, Session } from '../types.js';
 
 export interface AuthRestoreParams {
   email: string;
-  password: string;
 }
 export interface AuthRestoreResponse {
   data: {

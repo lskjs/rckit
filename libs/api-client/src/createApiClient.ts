@@ -42,7 +42,7 @@ export function createApiClient({ baseURL }: { baseURL?: string } = {}): ApiClie
     (err) => {
       const code = Err.getCode(err);
       if (code === 'ERR_CANCELED') {
-        log.debug('[canceled]', err?.config?.url);
+        log.warn('[canceled]', err?.config?.url);
       } else {
         // log.error('[err]', Err.getCode(err), err);
         log.error('[err]', code, err?.config?.url, Err.getMessage(err));

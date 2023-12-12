@@ -2,7 +2,7 @@ import { isDev } from '@lsk4/env';
 import { createLogger } from '@lsk4/log';
 import { ComponentContext } from '@rckit/link';
 import React, { useCallback, useContext } from 'react';
-import useLocalStorageState from 'use-local-storage-state';
+import ulss from 'use-local-storage-state';
 
 import { fetchAuthSession } from '../queries/authSessionQuery.js';
 import { Router, Session } from '../types.js';
@@ -13,32 +13,66 @@ import {
   AppSessionType,
   defaultAppSession,
 } from './useAppSession.js';
+// @ts-ignore
+const useLocalStorageState: typeof ulss = ulss.default || ulss;
+
+const Loading = ({ enable, children }: React.PropsWithChildren<any>) => (
+  <div
+    style={{
+      display: enable ? 'flex' : 'none',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: 'rgba(255,255,255,0.8)',
+      zIndex: 99999,
+    }}
+  >
+    <div
+      style={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translateY(-50%) translateX(-50%)',
+        zIndex: 99999,
+      }}
+    >
+      {children}
+    </div>
+  </div>
+);
 
 const initAt = Date.now();
 const log = createLogger('auth');
 export const AppSession = ({ children }: React.PropsWithChildren) => {
   const [appSession, setAppSession] = useLocalStorageState('appSession', {
-    defaultValue: { sessionStatus: 'init', ...defaultAppSession } as AppSessionType,
+    defaultValue: defaultAppSession as AppSessionType,
   });
   const updateSession = useCallback(
     async (data?: Session) => {
-      let session = data;
-      if (!data?._id) {
+      try {
+        let session = data;
+        if (!data?._id) {
+          setAppSession((prev) => ({
+            ...prev,
+            sessionStatus: 'loading',
+            sessionLoadingAt: Date.now(),
+          }));
+          // TODO: может случится такое что запрос упадет и будет вечный лоадинг, нужно придумать как обработать
+          ({ session } = await fetchAuthSession({}));
+        }
         setAppSession((prev) => ({
           ...prev,
-          sessionStatus: 'loading',
-          sessionLoadingAt: Date.now(),
+          session,
+          sessionId: session?._id,
+          sessionFetchedAt: Date.now(),
+          sessionStatus: 'fetched',
         }));
-        // TODO: может случится такое что запрос упадет и будет вечный лоадинг, нужно придумать как обработать
-        ({ session } = await fetchAuthSession({}));
+      } catch (err) {
+        log.error('[updateSession]', err);
+        throw err;
       }
-      setAppSession((prev) => ({
-        ...prev,
-        session,
-        sessionId: session?._id,
-        sessionFetchedAt: Date.now(),
-        sessionStatus: 'fetched',
-      }));
     },
     // // eslint-disable-next-line react-hooks/exhaustive-deps
     [appSession.sessionId, appSession.session, appSession.sessionFetchedAt],
@@ -85,25 +119,36 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
   // Всё что ниже какая-та слишком сложная логика, для этого компонента
 
   const { sessionStatus, sessionFetchedAt, sessionLoadingAt } = appSession;
-  const isExpired = (date: any, time = isDev ? 1000 * 60 : 1000 * 60 * 5) =>
-    +new Date(+date) < Date.now() - time;
+  const expiredTime = isDev ? 1000 * 60 : 1000 * 60 * 5;
+  const isExpired = (date: any, time = expiredTime) => +new Date(+date) < Date.now() - time;
   // * 60 * 24
   // console.log('[sessionStatus]', sessionStatus, { appSession });
-  if (sessionStatus === 'init') return <div>Init session...</div>;
+
+  let loadingText;
+  // if (sessionStatus === 'init') {
+  //   loadingText = 'Init session...';
+  //   // updateSession();
+  //   console.log('initAt', initAt);
+  //   console.log('appSession', appSession);
+  // } else
   if (sessionStatus === 'loading') {
     if (isExpired(sessionLoadingAt) || +(sessionLoadingAt || 0) < initAt) {
       updateSession();
-      return <div>Updating session...</div>;
+      loadingText = 'Updating session...';
+    } else if (!sessionFetchedAt) {
+      loadingText = 'Loading session...';
     }
-    return <div>Loading session...</div>;
-  }
-  if (sessionStatus === 'fetched') {
+  } else if (sessionStatus === 'fetched') {
     if (isExpired(sessionFetchedAt)) {
       updateSession();
-      return <div>Updating session...</div>;
+      loadingText = 'Updating session...';
     }
   }
-
   // if (chatsStatus.error) return `Error: ${chatsStatus.error.message}`;
-  return <AppSessionContext.Provider value={payload}>{children}</AppSessionContext.Provider>;
+  return (
+    <AppSessionContext.Provider value={payload}>
+      <Loading enable={!!loadingText}>{loadingText}</Loading>
+      {children}
+    </AppSessionContext.Provider>
+  );
 };
