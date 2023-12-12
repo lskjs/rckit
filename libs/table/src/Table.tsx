@@ -28,7 +28,7 @@ export const Table = ({
   query,
   data,
   count,
-  initialOpenFilter = true,
+  initialOpenFilter = false,
   onChange,
   columns,
   search,
