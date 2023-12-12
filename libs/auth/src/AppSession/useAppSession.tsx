@@ -15,7 +15,7 @@ export const defaultAppSession: AppSessionType = {};
 
 export type AppSessionContextProps = AppSessionType & {
   updateSession: (session?: Session) => void;
-  updateSessionWithRedirect: (session?: Session, path: string) => void;
+  updateSessionWithRedirect: (session?: Session, path?: string) => void;
   clearSession: () => void;
   setAppSession: Dispatch<SetStateAction<AppSessionType>>;
 };
