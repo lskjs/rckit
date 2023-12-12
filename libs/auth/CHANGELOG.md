@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.10.2](https://github.com/lskjs/lskjs/compare/v4.10.1...v4.10.2) (2023-12-12)
+
+
+### Bug Fixes
+
+* **auth:** add authRestoreQuery ([5d4997e](https://github.com/lskjs/lskjs/commit/5d4997eb9d1c8b0b2fed0673f47f740b55044de3))
+
+
+
+
+
 ## [4.10.1](https://github.com/lskjs/lskjs/compare/v4.10.0...v4.10.1) (2023-12-12)
 
 
