@@ -1,9 +1,6 @@
 import { useAppSession } from './AppSession/useAppSession.js';
+import { Router } from './types.js';
 
-type Router = {
-  asPath: string;
-  push: (url: string) => void;
-};
 type UseAuthGuardOptions = {
   role?: string;
   redirect?: string;

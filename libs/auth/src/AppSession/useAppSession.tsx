@@ -1,7 +1,7 @@
 /* eslint-disable prefer-destructuring */
 import { createContext, Dispatch, SetStateAction, useContext } from 'react';
 
-import { Session } from '../types.js';
+import { Router, Session } from '../types.js';
 
 export interface AppSessionType {
   sessionId?: string;
@@ -15,7 +15,11 @@ export const defaultAppSession: AppSessionType = {};
 
 export type AppSessionContextProps = AppSessionType & {
   updateSession: (session?: Session) => void;
-  updateSessionWithRedirect: (session?: Session, path?: string) => void;
+  updateSessionWithRedirect: (
+    session: Session | null,
+    router: Router,
+    path?: string | string[],
+  ) => void;
   clearSession: () => void;
   setAppSession: Dispatch<SetStateAction<AppSessionType>>;
 };

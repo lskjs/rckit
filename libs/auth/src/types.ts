@@ -11,3 +11,8 @@ export interface Session {
 export interface Otp {
   _id: string;
 }
+
+export type Router = {
+  asPath: string;
+  push: (url: string) => void;
+};

@@ -1,10 +1,11 @@
 import { isDev } from '@lsk4/env';
+import { createLogger } from '@lsk4/log';
 import { ComponentContext } from '@rckit/link';
 import React, { useCallback, useContext } from 'react';
 import useLocalStorageState from 'use-local-storage-state';
 
 import { fetchAuthSession } from '../queries/authSessionQuery.js';
-import { Session } from '../types.js';
+import { Router, Session } from '../types.js';
 // import TopupBanner from '@/components/TopupBanner/TopupBanner';
 import {
   AppSessionContext,
@@ -14,7 +15,7 @@ import {
 } from './useAppSession.js';
 
 const initAt = Date.now();
-
+const log = createLogger('auth');
 export const AppSession = ({ children }: React.PropsWithChildren) => {
   const [appSession, setAppSession] = useLocalStorageState('appSession', {
     defaultValue: { sessionStatus: 'init', ...defaultAppSession } as AppSessionType,
@@ -22,7 +23,6 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
   const updateSession = useCallback(
     async (data?: Session) => {
       let session = data;
-      // console.log('updateSession', { data, session });
       if (!data?._id) {
         setAppSession((prev) => ({
           ...prev,
@@ -43,20 +43,6 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
     // // eslint-disable-next-line react-hooks/exhaustive-deps
     [appSession.sessionId, appSession.session, appSession.sessionFetchedAt],
   );
-
-  const components = useContext(ComponentContext) as any;
-  const updateSessionWithRedirect = useCallback(
-    async (data?: Session, path?: string) => {
-      const redirect = (Array.isArray(path) ? path : path) || '/';
-      if (components?.Router?.useRouter) {
-        const router = components?.Router?.useRouter();
-        router.push(redirect);
-        updateSession(data);
-      }
-    },
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    [appSession.sessionId, components],
-  );
   const clearSession = useCallback(() => {
     setAppSession((prev) => ({
       ...prev,
@@ -68,6 +54,25 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
     }));
     // // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const components = useContext(ComponentContext) as any;
+  const updateSessionWithRedirect = useCallback(
+    async (session: Session | null, router: Router, path?: string | string[]) => {
+      const redirect = (Array.isArray(path) ? path[0] : path) || '/';
+      if (router) {
+        router.push(redirect);
+      } else {
+        log.warn('[redirect] !router', redirect);
+      }
+      if (session === null) {
+        clearSession();
+      } else {
+        updateSession(session);
+      }
+    },
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    [appSession.sessionId, components],
+  );
 
   const payload: AppSessionContextProps = {
     ...appSession,
