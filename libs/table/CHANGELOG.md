@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.10.0](https://github.com/lskjs/lskjs/compare/v4.9.1...v4.10.0) (2023-12-12)
+
+
+### Bug Fixes
+
+* **table:** init open filter false ([1fa5774](https://github.com/lskjs/lskjs/commit/1fa5774976aea54222d6e959bc906b93bdfcc8c4))
+
+
+
+
+
 ## [4.9.1](https://github.com/lskjs/lskjs/compare/v4.9.0...v4.9.1) (2023-12-10)
 
 

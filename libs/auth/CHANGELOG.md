@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.10.0](https://github.com/lskjs/lskjs/compare/v4.9.1...v4.10.0) (2023-12-12)
+
+
+### Bug Fixes
+
+* **auth:** ts error ([065c813](https://github.com/lskjs/lskjs/commit/065c8139b7ca192f5b1e50bf2e6d9cce7b11c105))
+
+
+### Features
+
+* **auth:** new methods for auth ([6b54f7a](https://github.com/lskjs/lskjs/commit/6b54f7ad90a50e62c103ac35047f4004f29783d0))
+
+
+
+
+
 ## [4.9.1](https://github.com/lskjs/lskjs/compare/v4.9.0...v4.9.1) (2023-12-10)
 
 

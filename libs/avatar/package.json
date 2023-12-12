@@ -1,6 +1,6 @@
 {
   "name": "@rckit/avatar",
-  "version": "4.8.1",
+  "version": "4.10.0",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -14,7 +14,7 @@
   "dependencies": {
     "@lsk4/algos": "^4.3.0",
     "@lsk4/env": "^4.1.0",
-    "@rckit/link": "^4.8.1"
+    "@rckit/link": "^4.10.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.41",

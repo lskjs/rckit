@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.10.0](https://github.com/lskjs/rckit/compare/v4.9.1...v4.10.0) (2023-12-12)
+
+
+### Bug Fixes
+
+* **auth:** ts error ([065c813](https://github.com/lskjs/rckit/commit/065c8139b7ca192f5b1e50bf2e6d9cce7b11c105))
+* **avatar:** change bs classes to css ([2258551](https://github.com/lskjs/rckit/commit/22585516aa8f48b32d342e7ed5356b3f86203daa))
+* **link:** pass all compoent to context ([382b904](https://github.com/lskjs/rckit/commit/382b90446732dc7d84acedff8364792b8dfa6c3f))
+* **table:** init open filter false ([1fa5774](https://github.com/lskjs/rckit/commit/1fa5774976aea54222d6e959bc906b93bdfcc8c4))
+
+
+### Features
+
+* **auth:** new methods for auth ([6b54f7a](https://github.com/lskjs/rckit/commit/6b54f7ad90a50e62c103ac35047f4004f29783d0))
+
+
+
+
+
 ## [4.9.1](https://github.com/lskjs/rckit/compare/v4.9.0...v4.9.1) (2023-12-10)
 
 
