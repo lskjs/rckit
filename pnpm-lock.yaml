@@ -64,7 +64,7 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1
       '@rckit/api-client':
-        specifier: ^4.5.1
+        specifier: ^4.10.3
         version: link:../api-client
       '@rckit/form':
         specifier: ^4.8.2

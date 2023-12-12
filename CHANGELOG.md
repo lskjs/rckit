@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.10.3](https://github.com/lskjs/rckit/compare/v4.10.2...v4.10.3) (2023-12-12)
+
+
+### Bug Fixes
+
+* **auth:** useLocalStorageState ([b761295](https://github.com/lskjs/rckit/commit/b761295f9b23d98e219385e54d29b110c9875003))
+
+
+
+
+
 ## [4.10.2](https://github.com/lskjs/rckit/compare/v4.10.1...v4.10.2) (2023-12-12)
 
 
