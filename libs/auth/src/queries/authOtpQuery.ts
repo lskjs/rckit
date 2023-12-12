@@ -24,6 +24,6 @@ export async function fetchAuthOtpActivate(
     url: '/api/auth/otp/activate',
     data: params,
   });
-  if (!data?.session) throw new Err('incorrectResponse');
+  if (!data?.session) throw new Err('incorrectBackendResponse', { data });
   return data;
 }

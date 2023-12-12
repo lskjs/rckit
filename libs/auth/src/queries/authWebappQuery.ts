@@ -25,6 +25,6 @@ export async function fetchAuthWebappSignup(
     url: '/api/auth/webapp/signup',
     data: params,
   });
-  if (!data?.otp && !data.session) throw new Err('incorrectResponse');
+  if (!data?.otp && !data?.session) throw new Err('incorrectBackendResponse', { data });
   return data;
 }

@@ -16,9 +16,11 @@
     "@lsk4/err": "^4.3.0",
     "@rckit/api-client": "^4.5.1",
     "@rckit/form": "^4.8.2",
-    "@rckit/link": "^4.8.1"
+    "@rckit/link": "^4.8.1",
+    "fishbird": "^1.1.8"
   },
   "devDependencies": {
+    "@types/node": "^20.10.4",
     "@types/react": "^18.2.42",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",

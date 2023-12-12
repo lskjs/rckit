@@ -24,6 +24,6 @@ export async function fetchAuthLogin(
     url: '/api/auth/login',
     data: params,
   });
-  if (!data?.otp && !data.session) throw new Err('incorrectResponse');
+  if (!data?.otp && !data?.session) throw new Err('incorrectBackendResponse', { data });
   return data;
 }

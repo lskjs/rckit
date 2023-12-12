@@ -21,6 +21,6 @@ export async function fetchAuthSession(
     url: '/api/auth/session',
     data: params,
   });
-  if (!data.session) throw new Err('incorrectResponse');
+  if (!data?.session) throw new Err('incorrectBackendResponse', { data });
   return data;
 }

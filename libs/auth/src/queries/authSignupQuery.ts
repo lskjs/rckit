@@ -14,6 +14,7 @@ export interface AuthSignupResponse {
     session: Session;
   };
 }
+
 export async function fetchAuthSignup(
   params: AuthSignupParams,
   { apiClient = defaultApiClient }: ApiClientOptions = {},
@@ -24,6 +25,6 @@ export async function fetchAuthSignup(
     url: '/api/auth/signup',
     data: params,
   });
-  if (!data?.otp && !data.session) throw new Err('incorrectResponse');
+  if (!data?.otp && !data?.session) throw new Err('incorrectBackendResponse', { data });
   return data;
 }

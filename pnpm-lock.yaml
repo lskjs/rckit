@@ -69,7 +69,13 @@ importers:
       '@rckit/link':
         specifier: ^4.8.1
         version: link:../link
+      fishbird:
+        specifier: ^1.1.8
+        version: 1.1.8
     devDependencies:
+      '@types/node':
+        specifier: ^20.10.4
+        version: 20.10.4
       '@types/react':
         specifier: ^18.2.42
         version: 18.2.42
@@ -8648,7 +8654,6 @@ packages:
 
   /fishbird@1.1.8:
     resolution: {integrity: sha512-TX8e3QrhcjvewN/xPoc3YyqnEQ1KZLirX27s1GEljlKJ19LU3sm+yQmoifaEXK2IkFJFvidmp+kYm4xHZLNozA==}
-    dev: true
 
   /flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}

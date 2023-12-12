@@ -7,6 +7,7 @@ export interface AppSessionType {
   sessionId?: string;
   session?: Session;
   sessionStatus?: string;
+  sessionLoadingAt?: number;
   sessionFetchedAt?: number;
 }
 
@@ -14,6 +15,7 @@ export const defaultAppSession: AppSessionType = {};
 
 export type AppSessionContextProps = AppSessionType & {
   updateSession: (session?: Session) => void;
+  updateSessionWithRedirect: (session?: Session, path: string) => void;
   clearSession: () => void;
   setAppSession: Dispatch<SetStateAction<AppSessionType>>;
 };
