@@ -1,5 +1,4 @@
 import { FormButton, FormItem, useSmartForm } from '@rckit/form';
-import { Link } from '@rckit/link';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 

@@ -1,6 +1,8 @@
-import React from 'react';
-import { Zebra } from "./Zebra";
+/* eslint-disable no-nested-ternary */
 import { isDev } from '@lsk4/env';
+import React from 'react';
+
+import { Zebra } from './Zebra';
 
 const useAppConfig = () => ({ isDebug: isDev });
 

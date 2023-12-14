@@ -1,2 +1,2 @@
-export * from './Debug.js'
-export * from './Zebra.js'
+export * from './Debug.js';
+export * from './Zebra.js';

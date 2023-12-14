@@ -1,5 +1,4 @@
-import React from 'react';
-import { PropsWithChildren, ReactNode } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 import { Form } from 'react-bootstrap';
 
 export interface FormItemProps {

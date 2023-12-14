@@ -51,6 +51,7 @@ export const TablePagination = ({
   );
 
   const pages = useMemo(() => {
+    // eslint-disable-next-line no-shadow
     const pages = [];
     const leftSide = pageRangeDisplayed / 2;
     const rightSide = pageRangeDisplayed - leftSide;
