@@ -7,8 +7,7 @@ const defaultMeta = {
   title: 'Kit4',
   lang: 'en',
   titleMask: '%s | Kit4',
-  description:
-    'Kit4 description',
+  description: 'Kit4 description',
 };
 
 interface OpenGraph {
@@ -30,11 +29,10 @@ interface Meta {
 
 export const useHeadMeta = (meta: Meta) => {
   // const { lang } = useTranslation();
-  const lang = defaultMeta.lang;
+  const { lang } = defaultMeta;
 
-  const title = meta.title
-    ? (meta.titleMask || defaultMeta.titleMask).replace('%s', meta.title)
-    : defaultMeta.title;
+  const titleMask = meta.titleMask || defaultMeta.titleMask;
+  const title = meta.title ? titleMask.replace('%s', meta.title) : defaultMeta.title;
 
   const description = meta.description || defaultMeta.description;
 

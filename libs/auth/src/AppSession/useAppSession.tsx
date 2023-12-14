@@ -7,11 +7,15 @@ export interface AppSessionType {
   sessionId?: string;
   session?: Session;
   sessionStatus?: string;
+  sessionInitedAt?: number;
   sessionLoadingAt?: number;
   sessionFetchedAt?: number;
 }
 
-export const defaultAppSession: AppSessionType = {};
+export const defaultAppSession: AppSessionType = {
+  sessionStatus: 'init',
+  sessionInitedAt: Date.now(),
+};
 
 export type AppSessionContextProps = AppSessionType & {
   updateSession: (session?: Session) => void;

@@ -1,4 +1,7 @@
+import { isClient } from '@lsk4/env';
+
 import { useAppSession } from './AppSession/useAppSession.js';
+import { log } from './log.js';
 import { Router } from './types.js';
 
 type UseAuthGuardOptions = {
@@ -31,7 +34,11 @@ export const useAuthGuard = (
     const path = redirect || defaultRedirect || '/auth/login';
     // console.log('[useAuthGuard] redirect', path);
     const url = `${path}?r=${encodeURIComponent(router.asPath)}`;
-    router.push(url);
+    if (isClient) {
+      router.push(url);
+    } else {
+      log.warn('[useAuthGuard] redirect !isClient', url);
+    }
     return url;
   }
   return null;

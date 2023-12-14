@@ -12,12 +12,14 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.1.0",
+    "@lsk4/algos": "^4.3.0",
+    "@lsk4/env": "^4.3.1",
     "@lsk4/err": "^4.3.0",
     "@lsk4/log": "^4.3.1",
-    "@rckit/api-client": "^4.10.3",
-    "@rckit/form": "^4.8.2",
-    "@rckit/link": "^4.10.0",
+    "@rckit/api-client": "workspace:^",
+    "@rckit/debug": "workspace:^",
+    "@rckit/form": "workspace:^",
+    "@rckit/link": "workspace:^",
     "fishbird": "^1.1.8"
   },
   "devDependencies": {

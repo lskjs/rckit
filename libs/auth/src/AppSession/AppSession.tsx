@@ -1,53 +1,21 @@
-import { isDev } from '@lsk4/env';
-import { createLogger } from '@lsk4/log';
+import { omit } from '@lsk4/algos';
+import { isDev, isServer } from '@lsk4/env';
 import { ComponentContext } from '@rckit/link';
 import React, { useCallback, useContext } from 'react';
 import ulss from 'use-local-storage-state';
 
+import { log } from '../log.js';
 import { fetchAuthSession } from '../queries/authSessionQuery.js';
 import { Router, Session } from '../types.js';
+import { LoadingScreen } from './LoadingScreen.js';
 // import TopupBanner from '@/components/TopupBanner/TopupBanner';
-import {
-  AppSessionContext,
-  AppSessionContextProps,
-  AppSessionType,
-  defaultAppSession,
-} from './useAppSession.js';
+import { AppSessionContext, AppSessionContextProps, defaultAppSession } from './useAppSession.js';
 // @ts-ignore
 const useLocalStorageState: typeof ulss = ulss.default || ulss;
 
-const Loading = ({ enable, children }: React.PropsWithChildren<any>) => (
-  <div
-    style={{
-      display: enable ? 'flex' : 'none',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      background: 'rgba(255,255,255,0.8)',
-      zIndex: 99999,
-    }}
-  >
-    <div
-      style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translateY(-50%) translateX(-50%)',
-        zIndex: 99999,
-      }}
-    >
-      {children}
-    </div>
-  </div>
-);
-
-const initAt = Date.now();
-const log = createLogger('auth');
 export const AppSession = ({ children }: React.PropsWithChildren) => {
   const [appSession, setAppSession] = useLocalStorageState('appSession', {
-    defaultValue: defaultAppSession as AppSessionType,
+    defaultValue: defaultAppSession,
   });
   const updateSession = useCallback(
     async (data?: Session) => {
@@ -124,15 +92,19 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
   // * 60 * 24
   // console.log('[sessionStatus]', sessionStatus, { appSession });
 
+  const isFirstInit =
+    sessionStatus === 'init' && appSession.sessionInitedAt === defaultAppSession.sessionInitedAt;
   let loadingText;
-  // if (sessionStatus === 'init') {
-  //   loadingText = 'Init session...';
-  //   // updateSession();
-  //   console.log('initAt', initAt);
-  //   console.log('appSession', appSession);
-  // } else
-  if (sessionStatus === 'loading') {
-    if (isExpired(sessionLoadingAt) || +(sessionLoadingAt || 0) < initAt) {
+  if (isFirstInit) {
+    loadingText = 'Init session...';
+    // updateSession();
+    // console.log('initAt', initAt);
+    // console.log('appSession', appSession);
+  } else if (sessionStatus === 'loading') {
+    if (
+      isExpired(sessionLoadingAt) ||
+      +(sessionLoadingAt || 0) < defaultAppSession.sessionInitedAt!
+    ) {
       updateSession();
       loadingText = 'Updating session...';
     } else if (!sessionFetchedAt) {
@@ -144,11 +116,14 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
       loadingText = 'Updating session...';
     }
   }
+  // return null;
   // if (chatsStatus.error) return `Error: ${chatsStatus.error.message}`;
   return (
     <AppSessionContext.Provider value={payload}>
-      <Loading enable={!!loadingText}>{loadingText}</Loading>
-      {children}
+      <LoadingScreen enable={!!loadingText} debug={omit(appSession as any, ['sessionInitedAt'])}>
+        {loadingText}
+      </LoadingScreen>
+      {!!loadingText && isServer ? null : children}
     </AppSessionContext.Provider>
   );
 };

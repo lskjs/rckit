@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useHeadMeta } from './useHeadMeta';
 
 type HeadMetaProps = {

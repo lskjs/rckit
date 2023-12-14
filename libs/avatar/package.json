@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@lsk4/algos": "^4.3.0",
-    "@lsk4/env": "^4.1.0",
-    "@rckit/link": "^4.10.0"
+    "@lsk4/env": "^4.3.1",
+    "@rckit/link": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.41",

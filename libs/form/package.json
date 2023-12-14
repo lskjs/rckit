@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.1.0",
+    "@lsk4/env": "^4.3.1",
     "@lsk4/err": "^4.3.0"
   },
   "devDependencies": {
