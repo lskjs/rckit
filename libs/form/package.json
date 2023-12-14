@@ -1,6 +1,6 @@
 {
   "name": "@rckit/form",
-  "version": "4.8.2",
+  "version": "4.10.4",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
