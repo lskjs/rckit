@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.11.0](https://github.com/lskjs/lskjs/compare/v4.10.5...v4.11.0) (2023-12-15)
+
+
+### Features
+
+* **form:** add FormError ([849459c](https://github.com/lskjs/lskjs/commit/849459cb0fc6cfcae69ef7c70fa94f68d3eff135))
+
+
+
+
+
 ## [4.10.5](https://github.com/lskjs/lskjs/compare/v4.10.4...v4.10.5) (2023-12-15)
 
 **Note:** Version bump only for package @rckit/form
