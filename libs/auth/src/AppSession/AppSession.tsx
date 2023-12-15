@@ -1,5 +1,5 @@
 import { omit } from '@lsk4/algos';
-import { isDev, isServer } from '@lsk4/env';
+import { isDev } from '@lsk4/env';
 import { ComponentContext } from '@rckit/link';
 import React, { useCallback, useContext } from 'react';
 import ulss from 'use-local-storage-state';
@@ -92,15 +92,16 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
   // * 60 * 24
   // console.log('[sessionStatus]', sessionStatus, { appSession });
 
-  const isFirstInit =
-    sessionStatus === 'init' && appSession.sessionInitedAt === defaultAppSession.sessionInitedAt;
   let loadingText;
-  if (isFirstInit) {
-    loadingText = 'Init session...';
-    // updateSession();
-    // console.log('initAt', initAt);
-    // console.log('appSession', appSession);
-  } else if (sessionStatus === 'loading') {
+  // const isFirstInit =
+  //   sessionStatus === 'init' && appSession.sessionInitedAt === defaultAppSession.sessionInitedAt;
+  // if (isFirstInit) {
+  //   loadingText = 'Init session...';
+  //   // updateSession();
+  //   // console.log('initAt', initAt);
+  //   // console.log('appSession', appSession);
+  // } else
+  if (sessionStatus === 'loading') {
     if (
       isExpired(sessionLoadingAt) ||
       +(sessionLoadingAt || 0) < defaultAppSession.sessionInitedAt!
@@ -116,14 +117,15 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
       loadingText = 'Updating session...';
     }
   }
-  // return null;
   // if (chatsStatus.error) return `Error: ${chatsStatus.error.message}`;
   return (
     <AppSessionContext.Provider value={payload}>
       <LoadingScreen enable={!!loadingText} debug={omit(appSession as any, ['sessionInitedAt'])}>
         {loadingText}
       </LoadingScreen>
-      {!!loadingText && isServer ? null : children}
+      {children}
+
+      {/* {!!loadingText && isServer ? null : children} */}
     </AppSessionContext.Provider>
   );
 };
