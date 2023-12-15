@@ -1,10 +1,11 @@
 import { Err } from '@lsk4/err';
-// import React from 'react';
+import { createLogger } from '@lsk4/log';
 import { FieldValues, useForm } from 'react-hook-form';
 
 type UseSmartFormProps = {
   onSubmit: (values: any) => Promise<any>;
 };
+const log = createLogger('form');
 
 export const useSmartForm = <T extends FieldValues>({ onSubmit, ...props }: UseSmartFormProps) => {
   // console.log({ useForm, React });
@@ -15,6 +16,7 @@ export const useSmartForm = <T extends FieldValues>({ onSubmit, ...props }: UseS
     try {
       await onSubmit(values);
     } catch (err) {
+      log.error(err);
       setError('root', { message: Err.getMessage(err) });
     }
   }
