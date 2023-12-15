@@ -3,6 +3,8 @@ import { FormButton, FormItem, useSmartForm } from '@rckit/form';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
+import { FormError } from './FormError';
+
 export interface AuthOtpFormValues {
   code: string;
 }
@@ -56,11 +58,7 @@ export function AuthOtpForm({ onSubmit }: AuthOtpFormProps) {
           Enter code
         </FormButton>
       </Col>
-      {formState.errors.root && (
-        <Col lg={12} className="text-center form-text text-danger">
-          {formState.errors.root?.message}
-        </Col>
-      )}
+      <FormError formState={formState} />
     </Form>
   );
 }

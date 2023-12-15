@@ -1,5 +1,5 @@
 import { omitNull } from '@lsk4/algos';
-import { isServer } from '@lsk4/env';
+import { isDev, isServer } from '@lsk4/env';
 import { Err } from '@lsk4/err';
 import { createLogger } from '@lsk4/log';
 import axios from 'axios';
@@ -7,7 +7,10 @@ import axios from 'axios';
 // import { serverBaseURL } from '@/config/config';
 import { ApiClient } from './types';
 
-const log = createLogger('api');
+const isDebug = isDev;
+const log = createLogger('api', {
+  level: isDebug ? 'debug' : 'info',
+});
 
 export function createApiClient({ baseURL }: { baseURL?: string } = {}): ApiClient {
   // eslint-disable-next-line no-nested-ternary
@@ -24,20 +27,21 @@ export function createApiClient({ baseURL }: { baseURL?: string } = {}): ApiClie
 
   instance.interceptors.request.use(
     (config) => {
-      log.debug('[req]', config.url, config.params, config.data);
+      log.debug('req', ...[config.url, config.params, config.data].filter(Boolean));
       if (isServer && !baseURL) throw new Err('!baseURL', 'baseURL is required on server');
       return config;
     },
     (err) => {
-      log.error('[req err]', err);
+      log.error('req', err);
       return err;
     },
   );
 
   instance.interceptors.response.use(
     (response) => {
-      log.debug('[ok]', response?.config?.url);
-      return response.data ?? response;
+      const data = response.data ?? response;
+      log.trace('res', response?.config?.url, data);
+      return data;
     },
     (err) => {
       const code = Err.getCode(err);
@@ -45,7 +49,7 @@ export function createApiClient({ baseURL }: { baseURL?: string } = {}): ApiClie
         log.warn('[canceled]', err?.config?.url);
       } else {
         // log.error('[err]', Err.getCode(err), err);
-        log.error('[err]', code, err?.config?.url, Err.getMessage(err));
+        log.error('res', ...[code, err?.config?.url, Err.getMessage(err)].filter(Boolean));
       }
       // log.error('[err]', Err.getCode(err), err?.response?.request);
       throw new Err(err?.response?.data?.code ? err?.response?.data : err);

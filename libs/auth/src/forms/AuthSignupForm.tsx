@@ -3,6 +3,8 @@ import { Link } from '@rckit/link';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
+import { FormError } from './FormError';
+
 export interface AuthSignupFormValues {
   email: string;
   password: string;
@@ -67,11 +69,7 @@ export function AuthSignupForm({ onSubmit }: AuthSignupFormProps) {
           Sign up
         </FormButton>
       </Col>
-      {formState.errors.root && (
-        <Col lg={12} className="text-center form-text text-danger">
-          {formState.errors.root?.message}
-        </Col>
-      )}
+      <FormError formState={formState} />
     </Form>
   );
 }

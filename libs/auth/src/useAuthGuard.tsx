@@ -17,13 +17,16 @@ export const useAuthGuard = (
   const user = session?.user;
   const userRole = user?.role;
   let isRedirect = false;
+  let isAddBackRedirect = false;
   let defaultRedirect;
   if (role === 'admin' && userRole !== 'admin') {
     isRedirect = true;
+    isAddBackRedirect = true;
     // TODO: redirect to 403
     defaultRedirect = '/cabinet/forbidden';
   } else if (role === 'user' && !['user', 'admin'].includes(userRole || '')) {
     isRedirect = true;
+    isAddBackRedirect = true;
     defaultRedirect = '/auth/login';
   } else if (role === 'guestOnly' && ['user', 'admin'].includes(userRole || '')) {
     isRedirect = true;
@@ -33,7 +36,11 @@ export const useAuthGuard = (
   if (isRedirect) {
     const path = redirect || defaultRedirect || '/auth/login';
     // console.log('[useAuthGuard] redirect', path);
-    const url = `${path}?r=${encodeURIComponent(router.asPath)}`;
+    let url = path;
+    if (isAddBackRedirect) {
+      const sign = url.includes('?') ? '&' : '?';
+      url = `${url}${sign}r=${encodeURIComponent(router.asPath)}`;
+    }
     if (isClient) {
       router.push(url);
     } else {

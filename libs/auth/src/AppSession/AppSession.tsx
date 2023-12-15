@@ -117,6 +117,7 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
       loadingText = 'Updating session...';
     }
   }
+
   // if (chatsStatus.error) return `Error: ${chatsStatus.error.message}`;
   return (
     <AppSessionContext.Provider value={payload}>
