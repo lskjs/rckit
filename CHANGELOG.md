@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.14.1](https://github.com/lskjs/rckit/compare/v4.14.0...v4.14.1) (2023-12-17)
+
+
+### Bug Fixes
+
+* **navbar:** add hidden menu ([ea94a2e](https://github.com/lskjs/rckit/commit/ea94a2e5e94d58e611866aecd4ca6756b9d2e349))
+
+
+
+
+
 # [4.14.0](https://github.com/lskjs/rckit/compare/v4.13.0...v4.14.0) (2023-12-17)
 
 
