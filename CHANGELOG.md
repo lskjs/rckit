@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.12.0](https://github.com/lskjs/rckit/compare/v4.11.0...v4.12.0) (2023-12-17)
+
+
+### Features
+
+* **auth:** add useAppUser ([93992f0](https://github.com/lskjs/rckit/commit/93992f09d12202c8f1c9af159bcccc49e1e925f5))
+
+
+
+
+
 # [4.11.0](https://github.com/lskjs/rckit/compare/v4.10.5...v4.11.0) (2023-12-15)
 
 
