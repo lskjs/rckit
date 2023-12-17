@@ -4,4 +4,5 @@ export interface NavbarMenuItem {
   items?: NavbarMenuItem[];
   active?: boolean;
   parent?: string;
+  hidden?: boolean;
 }

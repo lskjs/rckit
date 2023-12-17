@@ -13,8 +13,9 @@ interface NavbarMenuProps {
 
 export const NavbarMenu = ({ variant, items, activeHref }: NavbarMenuProps) => (
   <>
-    {items.map((item, index) =>
-      item.items ? (
+    {items.map((item, index) => {
+      if (item.hidden) return null;
+      return item.items ? (
         <NavDropdown
           key={index}
           title={item.title}
@@ -22,22 +23,25 @@ export const NavbarMenu = ({ variant, items, activeHref }: NavbarMenuProps) => (
           active={item.active}
           menuVariant={variant}
         >
-          {item.items?.map((subitem, i) => (
-            <NavDropdown.Item
-              as={Link}
-              key={i}
-              href={subitem.href}
-              active={isActive(subitem, activeHref)}
-            >
-              {subitem.title}
-            </NavDropdown.Item>
-          ))}
+          {item.items?.map((subitem, i) => {
+            if (subitem.hidden) return null;
+            return (
+              <NavDropdown.Item
+                as={Link}
+                key={i}
+                href={subitem.href}
+                active={isActive(subitem, activeHref)}
+              >
+                {subitem.title}
+              </NavDropdown.Item>
+            );
+          })}
         </NavDropdown>
       ) : (
         <Nav.Link key={index} href={item.href} active={isActive(item, activeHref)}>
           {item.title}
         </Nav.Link>
-      ),
-    )}
+      );
+    })}
   </>
 );
