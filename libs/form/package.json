@@ -24,9 +24,9 @@
     "react-hook-form": "^7.49.2"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.9.1",
-    "react-hook-form": "^7.48.2"
+    "react":  "*",
+    "react-bootstrap":  "*",
+    "react-hook-form":  "*"
   },
   "//": "///////////========================/////////========================/////////========================//////////",
   "prettier": "@lsk4/eslint-config/prettier",
