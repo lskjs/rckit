@@ -21,8 +21,8 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
       ycmd:
-        specifier: ^0.15.2
-        version: 0.15.2(esbuild@0.19.9)(typescript@5.3.3)
+        specifier: ^0.16.0
+        version: 0.16.0(esbuild@0.19.9)(typescript@5.3.3)
 
   libs/api-client:
     dependencies:
@@ -2388,12 +2388,6 @@ packages:
 
   /@lsk4/env@4.4.0:
     resolution: {integrity: sha512-6rleWuEaCk+5vW9/WrOfW015p3wTQa3fxS/fEgKz4OnqrOK51Y912GmEsdOV2B/6QlAyEP/R4HIOb7FI4aiynA==}
-
-  /@lsk4/err@4.1.1:
-    resolution: {integrity: sha512-k45l0OkTG2zK8qvfCeoSHhXvUl/UtRF+qWxVaQ0lKDaz6TJ9M0LCZRlmGF5QQtsiUWD7lf4nNf/aJw2b1Nm27w==}
-    dependencies:
-      '@lsk4/algos': 4.3.0
-    dev: true
 
   /@lsk4/err@4.4.0:
     resolution: {integrity: sha512-UGjlPfgsOLptJmBYmhXVFTh2hn2At8FgsjGfFdor4zQqfXLpqNUIUZfaKiWgHrWVNtmtoGEHLNIdcRBc0QRQmg==}
@@ -5533,8 +5527,8 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@ycmd/commands@0.15.2(esbuild@0.19.9)(typescript@5.3.3)(ycmd@0.15.2):
-    resolution: {integrity: sha512-nwQfc/Iav3N+EGpiAklvAdjbyGJtGIdQCKVB8+S9S7v3HvHg4QrawV4/6elt3JCLiPhrXP1JLo4zHzCsUfkT0A==}
+  /@ycmd/commands@0.16.0(esbuild@0.19.9)(typescript@5.3.3)(ycmd@0.16.0):
+    resolution: {integrity: sha512-iIGb6P09Ux5qBt/2UMruou/RBb3pPesWQ9pcoOm0nz0WuQrpL9ja/hXIRbz5W+qnwtiejlHsOPxngiL6GwRTnA==}
     peerDependencies:
       ycmd: ^0.8.0
     dependencies:
@@ -5547,8 +5541,8 @@ packages:
       '@size-limit/preset-small-lib': 11.0.1(size-limit@11.0.1)
       '@swc/cli': 0.1.63(@swc/core@1.3.100)(chokidar@3.5.3)
       '@swc/core': 1.3.100
-      '@ycmd/helpers': 0.15.1(esbuild@0.19.9)
-      '@ycmd/run': 0.15.1(esbuild@0.19.9)
+      '@ycmd/helpers': 0.16.0(esbuild@0.19.9)
+      '@ycmd/run': 0.16.0(esbuild@0.19.9)
       chokidar: 3.5.3
       clean-publish: github.com/isuvorov/clean-publish/bd4dc76ff2331b560c4c1e030375cb46ed3f518c
       fishbird: 1.1.8
@@ -5562,7 +5556,7 @@ packages:
       sort-package-json: 2.6.0
       tsm: 2.3.0
       yargs: 17.7.2
-      ycmd: 0.15.2(esbuild@0.19.9)(typescript@5.3.3)
+      ycmd: 0.16.0(esbuild@0.19.9)(typescript@5.3.3)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc-node/register'
@@ -5581,27 +5575,27 @@ packages:
       - webpack-cli
     dev: true
 
-  /@ycmd/helpers@0.15.1(esbuild@0.19.9):
-    resolution: {integrity: sha512-H+vf7dIDhDCnLMDzvkZqf3kXfOmCzousbReFQ7w42E2V8rC4/I5P5csN176XHK9UsbfvPFNTCgy76aY0alLtcg==}
+  /@ycmd/helpers@0.16.0(esbuild@0.19.9):
+    resolution: {integrity: sha512-stl/m8R/im0JOrgMWqisjHXPCdVw0/0IA1+9nKKDKHY+5BW8cirglMJaRB2Mkofhsg/C2at95lbVIYgdOx0fpA==}
     dependencies:
       '@lsk4/algos': 4.3.0
       '@lsk4/colors': 4.4.0
       '@lsk4/env': 4.4.0
       '@lsk4/err': 4.4.0
       '@lsk4/log': 4.4.0
-      '@ycmd/utils': 0.15.1(esbuild@0.19.9)
+      '@ycmd/utils': 0.16.0(esbuild@0.19.9)
       yargs: 17.7.2
     transitivePeerDependencies:
       - esbuild
     dev: true
 
-  /@ycmd/run@0.15.1(esbuild@0.19.9):
-    resolution: {integrity: sha512-XmfmoVj1G9y+ZobU2XSWi97dsiy5PhQjmzv/xQulFWsKxfD6AIy/XjmyZaMonyxd1LpF6y2MFAubsCSFymI7Gg==}
+  /@ycmd/run@0.16.0(esbuild@0.19.9):
+    resolution: {integrity: sha512-9EwuozZgmZ+5PCocWDWayFH9ik4nqUzq9Hsctm+MgKnrBvyDur3iB9z0HoDtG8q/sro2WCvpLIt0dyaBIYlUnA==}
     dependencies:
-      '@lsk4/err': 4.1.1
-      '@ycmd/helpers': 0.15.1(esbuild@0.19.9)
-      '@ycmd/spawn': 0.15.1(esbuild@0.19.9)
-      '@ycmd/utils': 0.15.1(esbuild@0.19.9)
+      '@lsk4/err': 4.4.0
+      '@ycmd/helpers': 0.16.0(esbuild@0.19.9)
+      '@ycmd/spawn': 0.16.0(esbuild@0.19.9)
+      '@ycmd/utils': 0.16.0(esbuild@0.19.9)
       fishbird: 1.1.8
       global-prefix: 3.0.0
       yargs: 17.7.2
@@ -5609,16 +5603,16 @@ packages:
       - esbuild
     dev: true
 
-  /@ycmd/spawn@0.15.1(esbuild@0.19.9):
-    resolution: {integrity: sha512-xP3w5WGj3tA+mmsOtmbC82hYrJice6pakmecS9nThwilNTgUS0xXyryhKxsP5bMCsjuGQwYH5nxEvojpO1OESw==}
+  /@ycmd/spawn@0.16.0(esbuild@0.19.9):
+    resolution: {integrity: sha512-g+TcR2+4dhTwnhQyFzoDPAF8TT+bLD+WlieQcnC3sa0jOBe3NH4/5D78zr9K++9AWZPQKx3v7PBZOlNGHfW0ew==}
     dependencies:
-      '@ycmd/utils': 0.15.1(esbuild@0.19.9)
+      '@ycmd/utils': 0.16.0(esbuild@0.19.9)
     transitivePeerDependencies:
       - esbuild
     dev: true
 
-  /@ycmd/utils@0.15.1(esbuild@0.19.9):
-    resolution: {integrity: sha512-64kJoMdI/DJMiRaYBif9Y8ltRBk7A66MUqExS04GTaSvUQk7kyQf5xNqIuCZwO4+GV3Ptmks7etgyWFI23nITQ==}
+  /@ycmd/utils@0.16.0(esbuild@0.19.9):
+    resolution: {integrity: sha512-W6z8xWwTbct17VJYgPDJZJw/tAVm2LO71VZBwJOnMCqvFC/5equ0IetZLCUg9683cdtC7xAeiFaP+UbdesUBmA==}
     dependencies:
       '@lsk4/config': 4.4.0(esbuild@0.19.9)
       '@lsk4/env': 4.4.0
@@ -15061,15 +15055,15 @@ packages:
       fd-slicer: 1.1.0
     dev: true
 
-  /ycmd@0.15.2(esbuild@0.19.9)(typescript@5.3.3):
-    resolution: {integrity: sha512-lOxZJyvp5vr3JTNIyzfKfLsMbijq9QEbDQ80eYv4Z82cp19GORTeyiD9rEJgXAB9fxG8h+0IubCCehDGhrhFYw==}
+  /ycmd@0.16.0(esbuild@0.19.9)(typescript@5.3.3):
+    resolution: {integrity: sha512-M/haE/FEK64bbEz+O3z3tBcFOrdhp/OPw7nbIrqDhnwwwd5EpEZQ5qgkvi2UFCXpjAc9UWxve2h7z6KwVDxK/A==}
     hasBin: true
     dependencies:
       '@lsk4/err': 4.4.0
-      '@ycmd/commands': 0.15.2(esbuild@0.19.9)(typescript@5.3.3)(ycmd@0.15.2)
-      '@ycmd/helpers': 0.15.1(esbuild@0.19.9)
-      '@ycmd/run': 0.15.1(esbuild@0.19.9)
-      '@ycmd/utils': 0.15.1(esbuild@0.19.9)
+      '@ycmd/commands': 0.16.0(esbuild@0.19.9)(typescript@5.3.3)(ycmd@0.16.0)
+      '@ycmd/helpers': 0.16.0(esbuild@0.19.9)
+      '@ycmd/run': 0.16.0(esbuild@0.19.9)
+      '@ycmd/utils': 0.16.0(esbuild@0.19.9)
       yargs: 17.7.2
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
