@@ -1,6 +1,6 @@
 {
   "name": "@rckit/table",
-  "version": "4.10.5",
+  "version": "4.13.0",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -25,8 +25,8 @@
     "react": "^18.2.0"
   },
   "peerDependencies": {
-    "@tanstack/react-table":  "*",
-    "react":  "*"
+    "@tanstack/react-table": "*",
+    "react": "*"
   },
   "//": "///////////========================/////////========================/////////========================//////////",
   "prettier": "@lsk4/eslint-config/prettier",

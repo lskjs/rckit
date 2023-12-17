@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.13.0](https://github.com/lskjs/lskjs/compare/v4.12.0...v4.13.0) (2023-12-17)
+
+
+### Features
+
+* **auth:** add AppConfig ([1cdcc89](https://github.com/lskjs/lskjs/commit/1cdcc894d2e7c76b82db292eaf142f7560369bed))
+
+
+
+
+
 # [4.12.0](https://github.com/lskjs/lskjs/compare/v4.11.0...v4.12.0) (2023-12-17)
 
 

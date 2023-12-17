@@ -1,6 +1,6 @@
 {
   "name": "@rckit/icons",
-  "version": "4.10.5",
+  "version": "4.13.0",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -17,7 +17,7 @@
     "react-icons": "^4.12.0"
   },
   "peerDependencies": {
-    "react":  "*"
+    "react": "*"
   },
   "//": "///////////========================/////////========================/////////========================//////////",
   "prettier": "@lsk4/eslint-config/prettier",
