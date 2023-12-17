@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "^4.3.0",
+    "@lsk4/algos": "^4.5.0",
     "@lsk4/env": "^4.4.0",
     "@rckit/link": "workspace:^"
   },

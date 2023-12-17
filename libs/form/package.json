@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@lsk4/env": "^4.4.0",
-    "@lsk4/err": "^4.4.0",
-    "@lsk4/log": "^4.4.0"
+    "@lsk4/err": "^4.5.0",
+    "@lsk4/log": "^4.5.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",

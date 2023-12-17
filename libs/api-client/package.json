@@ -12,10 +12,10 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "^4.3.0",
+    "@lsk4/algos": "^4.5.0",
     "@lsk4/env": "^4.4.0",
-    "@lsk4/err": "^4.4.0",
-    "@lsk4/log": "^4.4.0",
+    "@lsk4/err": "^4.5.0",
+    "@lsk4/log": "^4.5.0",
     "axios": "^1.6.2"
   },
   "devDependencies": {
