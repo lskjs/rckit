@@ -5,6 +5,7 @@ import React, { useCallback, useContext } from 'react';
 import ulss from 'use-local-storage-state';
 
 import { log } from '../log.js';
+import { fetchAuthLogout } from '../queries/authLogoutQuery.js';
 import { fetchAuthSession } from '../queries/authSessionQuery.js';
 import { Router, Session } from '../types.js';
 import { LoadingScreen } from './LoadingScreen.js';
@@ -45,7 +46,13 @@ export const AppSession = ({ children }: React.PropsWithChildren) => {
     // // eslint-disable-next-line react-hooks/exhaustive-deps
     [appSession.sessionId, appSession.session, appSession.sessionFetchedAt],
   );
-  const clearSession = useCallback(() => {
+  const clearSession = useCallback(async () => {
+    setAppSession((prev) => ({
+      ...prev,
+      sessionStatus: 'loading',
+      sessionLoadingAt: Date.now(),
+    }));
+    await fetchAuthLogout();
     setAppSession((prev) => ({
       ...prev,
       session: undefined,
