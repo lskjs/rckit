@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.15.1](https://github.com/lskjs/lskjs/compare/v4.15.0...v4.15.1) (2023-12-19)
+
+
+### Bug Fixes
+
+* **auth:** logout session ([a5a9dd2](https://github.com/lskjs/lskjs/commit/a5a9dd2e8fa0273c31522e6751cb7fc0be5566be))
+
+
+
+
+
 # [4.14.0](https://github.com/lskjs/lskjs/compare/v4.13.0...v4.14.0) (2023-12-17)
 
 **Note:** Version bump only for package @rckit/auth
