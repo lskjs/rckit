@@ -27,7 +27,7 @@ export function AuthRestoreForm({ onSubmit }: AuthRestoreFormProps) {
       </Col>
       <Col lg={12}>
         <FormButton formState={formState} type="submit" className="w-100">
-          Restore password
+          Send Reset Instructions
         </FormButton>
       </Col>
       <FormError formState={formState} />

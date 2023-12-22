@@ -2,20 +2,24 @@ import { Err } from '@lsk4/err';
 import type { ApiClientOptions } from '@rckit/api-client';
 import { apiClient as defaultApiClient } from '@rckit/api-client';
 
-export interface AuthRestoreParams {
-  email: string;
+export interface AuthResetPasswordParams {
+  otpId: string;
+  code: string;
+  newPassword: string;
 }
-export interface AuthRestoreResponse {
+
+export interface AuthResetPasswordResponse {
   data: boolean;
 }
-export async function fetchAuthRestore(
-  params: AuthRestoreParams,
+
+export async function fetchAuthResetPassword(
+  params: AuthResetPasswordParams,
   { apiClient = defaultApiClient }: ApiClientOptions = {},
 ) {
   // TODO: change any
-  const { data } = await apiClient.request<any, AuthRestoreResponse>({
+  const { data } = await apiClient.request<any, AuthResetPasswordResponse>({
     method: 'post',
-    url: '/api/auth/resetPassword/request',
+    url: '/api/auth/resetPassword',
     data: params,
   });
   if (typeof data !== 'boolean') throw new Err('incorrectBackendResponse', { data });
