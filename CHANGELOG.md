@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.16.0](https://github.com/lskjs/rckit/compare/v4.15.1...v4.16.0) (2023-12-22)
+
+
+### Bug Fixes
+
+* **form:** add rhf types ([ea183bc](https://github.com/lskjs/rckit/commit/ea183bcbe9bc71c5cd505098798e93cd1026f841))
+
+
+### Features
+
+* **auth:** restore password methods & forms ([7ccb137](https://github.com/lskjs/rckit/commit/7ccb137c76d052dd20e92508b2aabe1bc8c9fbee))
+
+
+
+
+
 ## [4.15.1](https://github.com/lskjs/rckit/compare/v4.15.0...v4.15.1) (2023-12-19)
 
 

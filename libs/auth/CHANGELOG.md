@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.16.0](https://github.com/lskjs/lskjs/compare/v4.15.1...v4.16.0) (2023-12-22)
+
+
+### Features
+
+* **auth:** restore password methods & forms ([7ccb137](https://github.com/lskjs/lskjs/commit/7ccb137c76d052dd20e92508b2aabe1bc8c9fbee))
+
+
+
+
+
 ## [4.15.1](https://github.com/lskjs/lskjs/compare/v4.15.0...v4.15.1) (2023-12-19)
 
 
