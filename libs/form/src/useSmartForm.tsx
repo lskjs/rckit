@@ -1,13 +1,17 @@
 import { Err } from '@lsk4/err';
 import { createLogger } from '@lsk4/log';
-import { FieldValues, useForm } from 'react-hook-form';
+import { FieldValues, useForm, UseFormProps } from 'react-hook-form';
 
-type UseSmartFormProps = {
+type UseSmartFormProps<T extends FieldValues> = {
   onSubmit: (values: any) => Promise<any>;
-};
+} & UseFormProps<T, any>;
+
 const log = createLogger('form');
 
-export const useSmartForm = <T extends FieldValues>({ onSubmit, ...props }: UseSmartFormProps) => {
+export const useSmartForm = <T extends FieldValues>({
+  onSubmit,
+  ...props
+}: UseSmartFormProps<T>) => {
   // console.log({ useForm, React });
   const { register, handleSubmit, formState, setError, clearErrors, ...other } = useForm<T>(props);
   async function onWrappedSubmit(values: T) {
