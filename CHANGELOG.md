@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.19.0](https://github.com/lskjs/rckit/compare/v4.18.0...v4.19.0) (2023-12-25)
+
+
+### Features
+
+* **icons:** add more icons and auto icons extractor ([598b5c3](https://github.com/lskjs/rckit/commit/598b5c36363d50897080ff42d385541537b21dd9))
+
+
+
+
+
 # [4.18.0](https://github.com/lskjs/rckit/compare/v4.17.0...v4.18.0) (2023-12-25)
 
 
