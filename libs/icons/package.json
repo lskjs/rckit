@@ -6,12 +6,14 @@
   "private": false,
   "scripts": {
     "dev": "            ycmd dev",
+    "prebuild": "       ycmd prebuild",
     "build": "          ycmd build",
     "test": "           ycmd test",
     "prepack": "        ycmd prepack",
     "release": "        ycmd release"
   },
   "devDependencies": {
+    "@lsk4/algos": "^4.5.0",
     "@types/react": "^18.2.45",
     "react": "^18.2.0",
     "react-icons": "^4.12.0"
@@ -64,5 +66,12 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "////": "/////////========================/////////========================/////////========================/////////"
+  "////": "/////////========================/////////========================/////////========================/////////",
+  "ycmd": {
+    "scripts": [
+      "./scripts",
+      "../../scripts",
+      "../../node_modules/ycmd/scripts"
+    ]
+  }
 }
