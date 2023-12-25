@@ -11,6 +11,7 @@ interface AppNavbarProps {
   logo?: React.ReactNode;
   menuItems: NavbarMenuItem[];
   adminMenuItems: NavbarMenuItem[];
+  container?: boolean;
   variant?: string;
   expand?: string;
   activeHref?: string;
@@ -21,6 +22,7 @@ export const AppNavbar = ({
   logo = null,
   menuItems = [],
   adminMenuItems = [],
+  container = true,
   variant = 'dark',
   expand = 'lg',
   activeHref,
@@ -28,9 +30,10 @@ export const AppNavbar = ({
   ...props
 }: AppNavbarProps) => {
   const user = useAppUser();
+  const Wrapper = container ? Container : React.Fragment;
   return (
     <Navbar bg={variant} variant={variant} expand={expand} className={className} {...props}>
-      <Container>
+      <Wrapper>
         <Navbar.Brand href="/">{logo || 'App Title'}</Navbar.Brand>
         <Navbar.Toggle aria-controls="app-navbar" />
         <Navbar.Collapse id="app-navbar">
@@ -49,7 +52,7 @@ export const AppNavbar = ({
             <AppNavbarUser variant={variant} />
           </Nav>
         </Navbar.Collapse>
-      </Container>
+      </Wrapper>
     </Navbar>
   );
 };

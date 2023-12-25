@@ -12,15 +12,15 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.4.0",
+    "@lsk4/env": "^4.6.0",
     "@lsk4/err": "^4.5.0",
-    "@lsk4/log": "^4.5.0"
+    "@lsk4/log": "^4.7.0"
   },
   "devDependencies": {
-    "@types/node": "^20.10.4",
+    "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.9.1",
+    "react-bootstrap": "^2.9.2",
     "react-hook-form": "^7.49.2"
   },
   "peerDependencies": {

@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "@lsk4/algos": "^4.5.0",
-    "@lsk4/env": "^4.4.0",
+    "@lsk4/env": "^4.6.0",
     "@lsk4/err": "^4.5.0",
-    "@lsk4/log": "^4.5.0",
+    "@lsk4/log": "^4.7.0",
     "axios": "^1.6.2"
   },
   "devDependencies": {
-    "@types/node": "^20.10.4",
+    "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "react": "^18.2.0"
   },

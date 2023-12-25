@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.4.0",
+    "@lsk4/env": "^4.6.0",
     "@rckit/auth": "workspace:^",
     "@rckit/avatar": "workspace:^",
     "@rckit/link": "workspace:^",
@@ -21,7 +21,7 @@
   "devDependencies": {
     "@types/react": "^18.2.45",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.9.1"
+    "react-bootstrap": "^2.9.2"
   },
   "peerDependencies": {
     "react": "*",

@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@lsk4/algos": "^4.5.0",
-    "@lsk4/env": "^4.4.0",
+    "@lsk4/env": "^4.6.0",
     "@rckit/link": "workspace:^"
   },
   "devDependencies": {

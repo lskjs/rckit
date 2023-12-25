@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.4.0",
+    "@lsk4/env": "^4.6.0",
     "@rckit/debug": "workspace:^",
     "@rckit/icons": "workspace:^",
     "clsx": "^2.0.0",
@@ -20,7 +20,7 @@
     "use-debounce": "^10.0.0"
   },
   "devDependencies": {
-    "@tanstack/react-table": "^8.10.7",
+    "@tanstack/react-table": "^8.11.2",
     "@types/react": "^18.2.45",
     "react": "^18.2.0"
   },

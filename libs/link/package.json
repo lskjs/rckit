@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.4.0"
+    "@lsk4/env": "^4.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.45",
