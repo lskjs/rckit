@@ -14,6 +14,7 @@ export const Avatar = (props: AvatarProps) => {
   const alt = props.title || props.name || props.email || '?';
   const round = props.round === false || true;
   const htmlProps = omit(props as any, avatarProps);
+  const Img = props.as || Image;
 
   return (
     <div
@@ -26,7 +27,7 @@ export const Avatar = (props: AvatarProps) => {
       }}
     >
       <AvatarPlaceholder style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }} {...props} />
-      <Image
+      <Img
         style={{ position: 'absolute', top: 0, left: 0, zIndex: 1 }}
         src={src}
         alt={alt}
