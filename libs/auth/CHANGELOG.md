@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.20.0](https://github.com/lskjs/lskjs/compare/v4.19.0...v4.20.0) (2023-12-25)
+
+
+### Features
+
+* **navbar:** add container false ([29a97ef](https://github.com/lskjs/lskjs/commit/29a97efd1614a61f2911b20b5716f74956d7fe3e))
+
+
+
+
+
 # [4.16.0](https://github.com/lskjs/lskjs/compare/v4.15.1...v4.16.0) (2023-12-22)
 
 
