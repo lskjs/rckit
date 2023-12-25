@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.18.0](https://github.com/lskjs/lskjs/compare/v4.17.0...v4.18.0) (2023-12-25)
+
+
+### Features
+
+* **avatar:** add avatar children for badges ([fde3cc0](https://github.com/lskjs/lskjs/commit/fde3cc0f74448aa429f162c5fef8fa0a7decadc3))
+
+
+
+
+
 # [4.17.0](https://github.com/lskjs/lskjs/compare/v4.16.0...v4.17.0) (2023-12-25)
 
 
