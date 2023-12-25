@@ -44,6 +44,9 @@ export const Avatar = (props: AvatarProps) => {
         //   e.currentTarget.src = '';
         // }}
       />
+      {props.children}
     </div>
   );
 };
+
+// {/* <Avatar as="img" />; */}

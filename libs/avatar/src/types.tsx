@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
-  as: React.ElementType;
+  as: React.ElementType | string;
   src?: string;
   id?: string;
   _id?: string;
@@ -12,8 +12,11 @@ export type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
   height?: number;
   width?: number;
   round?: boolean;
+  children?: React.ReactNode;
 };
 export const avatarProps = [
+  'as',
+  'src',
   'src',
   'id',
   '_id',
@@ -24,6 +27,7 @@ export const avatarProps = [
   'height',
   'width',
   'round',
+  'children',
 ];
 
 export const defaultAvatarColors = [
