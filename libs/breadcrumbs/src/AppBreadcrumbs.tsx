@@ -12,7 +12,7 @@ export type AppBreadcrumbsProps = React.PropsWithChildren<{
   title?: string;
   activeHref?: string;
   actions?: React.ReactNode;
-  items: MenuItem[];
+  items?: MenuItem[];
   showTitle?: boolean;
 }>;
 

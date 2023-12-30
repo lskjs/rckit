@@ -1,17 +1,21 @@
 import React from 'react';
 
-import { AppMenuConfigContext } from './useAppMenuConfig';
-// import useLocalStorageState from 'use-local-storage-state';
+import { AppMenuConfigContext, AppMenuConfigContextProps } from './useAppMenuConfig';
 
-export const AppMenuConfig = ({ items, children }: any) => (
-  // const
-  // const [appMenuConfig, setAppMenuConfig] = useLocalStorageState('AppMenuConfig', {
-  //   defaultValue: defaultAppMenuConfig,
+const isType = (type: string) => (item: any) => item.type === type || item.types?.includes(type);
+export const AppMenuConfig = ({ items = [], children }: any) => {
+  const navItems = items.filter(isType('nav'));
+  const adminItems = items.filter(isType('admin'));
+  const cabinetItems = items.filter(isType('cabinet'));
+  const profileItems = items.filter(isType('profile'));
 
-  // const payload: AppMenuConfigContextProps = {
-  //   ...appMenuConfig,
-  //   setAppMenuConfig,
-  // };
+  const payload: AppMenuConfigContextProps = {
+    items,
+    navItems,
+    cabinetItems,
+    adminItems,
+    profileItems,
+  };
 
-  <AppMenuConfigContext.Provider value={items}>{children}</AppMenuConfigContext.Provider>
-);
+  return <AppMenuConfigContext.Provider value={payload}>{children}</AppMenuConfigContext.Provider>;
+};

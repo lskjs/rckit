@@ -1,20 +1,25 @@
-import { createContext, Dispatch, SetStateAction, useContext } from 'react';
+import { createContext, useContext } from 'react';
 
 import { MenuItem } from '../types.js';
 
 export interface AppMenuConfigType {
-  items?: MenuItem[];
-  // isDebug: boolean;
-  // theme: 'light' | 'dark';
+  items: MenuItem[];
+  navItems: MenuItem[];
+  cabinetItems: MenuItem[];
+  adminItems: MenuItem[];
+  profileItems: MenuItem[];
 }
 
 export const defaultAppMenuConfig: AppMenuConfigType = {
-  // isDebug: false,
-  // theme: 'light',
+  items: [],
+  navItems: [],
+  cabinetItems: [],
+  adminItems: [],
+  profileItems: [],
 };
 
 export type AppMenuConfigContextProps = AppMenuConfigType & {
-  setAppMenuConfig: Dispatch<SetStateAction<AppMenuConfigType>>;
+  // setAppMenuConfig: Dispatch<SetStateAction<AppMenuConfigType>>;
 };
 
 export const AppMenuConfigContext = createContext<AppMenuConfigContextProps>(

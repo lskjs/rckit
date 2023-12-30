@@ -1,5 +1,5 @@
-import { useAppConfig, useAppUser } from '@rckit/auth';
-import type { MenuItem } from '@rckit/breadcrumbs';
+import { useAppUser } from '@rckit/auth';
+import { type MenuItem, useAppMenuConfig } from '@rckit/breadcrumbs';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
@@ -19,7 +19,7 @@ interface AppNavbarProps {
 
 export const AppNavbar = ({
   logo = null,
-  menus: initMenus,
+  // menus: initMenus,
   container = true,
   variant = 'dark',
   expand = 'lg',
@@ -27,10 +27,9 @@ export const AppNavbar = ({
   className = '',
   ...props
 }: AppNavbarProps) => {
-  const config = useAppConfig() as any;
-  const menus: MenuItem[] = initMenus || config?.menus || [];
-  const menuItems = menus?.[0]?.items || [];
-  const adminMenuItems = menus?.[1]?.items || [];
+  const { navItems, adminItems } = useAppMenuConfig();
+  // @ts-ignore
+  console.log({ navItems });
 
   const user = useAppUser();
   const Wrapper = container ? Container : React.Fragment;
@@ -41,7 +40,7 @@ export const AppNavbar = ({
         <Navbar.Toggle aria-controls="app-navbar" />
         <Navbar.Collapse id="app-navbar">
           <Nav className="me-auto">
-            <NavbarMenu variant={variant} items={menuItems} activeHref={activeHref} />
+            <NavbarMenu variant={variant} items={navItems} activeHref={activeHref} />
           </Nav>
           <Nav
             style={{
@@ -50,7 +49,7 @@ export const AppNavbar = ({
           >
             <AppNavbarDebug />
             {user?.isAdmin && (
-              <NavbarMenu variant={variant} items={adminMenuItems} activeHref={activeHref} />
+              <NavbarMenu variant={variant} items={adminItems} activeHref={activeHref} />
             )}
             <AppNavbarUser variant={variant} />
           </Nav>

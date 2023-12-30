@@ -1,4 +1,5 @@
 import { useAppSession, useAppUser } from '@rckit/auth';
+import { useAppMenuConfig } from '@rckit/breadcrumbs';
 import { Link } from '@rckit/link';
 import React from 'react';
 import { Nav, NavDropdown } from 'react-bootstrap';
@@ -10,6 +11,7 @@ type AppNavbarUserProps = React.PropsWithChildren<{
 }>;
 
 export const AppNavbarUser = ({ variant }: AppNavbarUserProps) => {
+  const { profileItems } = useAppMenuConfig();
   const { sessionStatus } = useAppSession();
   const user = useAppUser();
   if (sessionStatus === 'loading') {
@@ -33,12 +35,26 @@ export const AppNavbarUser = ({ variant }: AppNavbarUserProps) => {
           }
           menuVariant={variant}
         >
-          <NavDropdown.Item as={Link} href="/cabinet/profile">
+          {profileItems.map((item: any, index: any) => {
+            if (item.hidden) return null;
+            return (
+              <NavDropdown.Item
+                as={Link}
+                key={index}
+                href={item.href}
+                active={item.active}
+                // style={{ display: 'flex', alignItems: 'center' }}
+              >
+                {item.title}
+              </NavDropdown.Item>
+            );
+          })}
+          {/* <NavDropdown.Item as={Link} href="/cabinet/profile">
             Profile
           </NavDropdown.Item>
           <NavDropdown.Item as={Link} href="/cabinet/settings">
             Settings
-          </NavDropdown.Item>
+          </NavDropdown.Item> */}
           <NavDropdown.Divider />
           <NavDropdown.Item as={Link} href="/auth/logout">
             Logout
