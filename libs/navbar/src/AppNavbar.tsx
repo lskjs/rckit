@@ -29,7 +29,7 @@ export const AppNavbar = ({
 }: AppNavbarProps) => {
   const { navItems, adminItems } = useAppMenuConfig();
   // @ts-ignore
-  console.log({ navItems });
+  // console.log({ navItems });
 
   const user = useAppUser();
   const Wrapper = container ? Container : React.Fragment;
@@ -42,13 +42,9 @@ export const AppNavbar = ({
           <Nav className="me-auto">
             <NavbarMenu variant={variant} items={navItems} activeHref={activeHref} />
           </Nav>
-          <Nav
-            style={{
-              display: 'flex',
-            }}
-          >
+          <Nav style={{ display: 'flex' }}>
             <AppNavbarDebug />
-            {user?.isAdmin && (
+            {user?.isAdmin && adminItems?.length && (
               <NavbarMenu variant={variant} items={adminItems} activeHref={activeHref} />
             )}
             <AppNavbarUser variant={variant} />
