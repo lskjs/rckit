@@ -1,13 +1,12 @@
+import type { MenuItem } from '@rckit/breadcrumbs';
+import { isActive } from '@rckit/breadcrumbs';
 import { Link } from '@rckit/link';
 import React from 'react';
 import { Nav, NavDropdown } from 'react-bootstrap';
 
-import { NavbarMenuItem } from './types.js';
-import { isActive } from './utils.js';
-
 interface NavbarMenuProps {
   variant?: string;
-  items: NavbarMenuItem[];
+  items: MenuItem[];
   activeHref?: string;
 }
 

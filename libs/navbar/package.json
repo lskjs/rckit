@@ -15,6 +15,7 @@
     "@lsk4/env": "^4.6.0",
     "@rckit/auth": "workspace:^",
     "@rckit/avatar": "workspace:^",
+    "@rckit/breadcrumbs": "workspace:^",
     "@rckit/link": "workspace:^",
     "@rckit/secret-checkbox": "workspace:^"
   },

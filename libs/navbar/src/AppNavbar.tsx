@@ -1,16 +1,15 @@
-import { useAppUser } from '@rckit/auth';
+import { useAppConfig, useAppUser } from '@rckit/auth';
+import type { MenuItem } from '@rckit/breadcrumbs';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
 import { AppNavbarDebug } from './AppNavbarDebug.js';
 import { AppNavbarUser } from './AppNavbarUser.js';
 import { NavbarMenu } from './NavbarMenu.js';
-import { NavbarMenuItem } from './types.js';
 
 interface AppNavbarProps {
   logo?: React.ReactNode;
-  menuItems: NavbarMenuItem[];
-  adminMenuItems: NavbarMenuItem[];
+  menus: MenuItem[];
   container?: boolean;
   variant?: string;
   expand?: string;
@@ -20,8 +19,7 @@ interface AppNavbarProps {
 
 export const AppNavbar = ({
   logo = null,
-  menuItems = [],
-  adminMenuItems = [],
+  menus: initMenus,
   container = true,
   variant = 'dark',
   expand = 'lg',
@@ -29,6 +27,11 @@ export const AppNavbar = ({
   className = '',
   ...props
 }: AppNavbarProps) => {
+  const config = useAppConfig() as any;
+  const menus: MenuItem[] = initMenus || config?.menus || [];
+  const menuItems = menus?.[0]?.items || [];
+  const adminMenuItems = menus?.[1]?.items || [];
+
   const user = useAppUser();
   const Wrapper = container ? Container : React.Fragment;
   return (
