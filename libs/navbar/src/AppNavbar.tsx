@@ -44,7 +44,7 @@ export const AppNavbar = ({
           </Nav>
           <Nav style={{ display: 'flex' }}>
             <AppNavbarDebug />
-            {user?.isAdmin && adminItems?.length && (
+            {user?.isAdmin && Boolean(adminItems?.length) && (
               <NavbarMenu variant={variant} items={adminItems} activeHref={activeHref} />
             )}
             <AppNavbarUser variant={variant} />

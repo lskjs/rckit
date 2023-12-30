@@ -52,7 +52,7 @@ export const AppNavbarUser = ({ variant }: AppNavbarUserProps) => {
           <NavDropdown.Item as={Link} href="/cabinet/settings">
             Settings
           </NavDropdown.Item> */}
-          {profileItems?.length && <NavDropdown.Divider />}
+          {Boolean(profileItems?.length) && <NavDropdown.Divider />}
           <NavDropdown.Item as={Link} href="/auth/logout">
             Logout
           </NavDropdown.Item>
