@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.21.0](https://github.com/lskjs/lskjs/compare/v4.20.0...v4.21.0) (2023-12-30)
+
+
+### Features
+
+* **icons:** add new icons ([4e67a29](https://github.com/lskjs/lskjs/commit/4e67a29a3d046e0acaefa87c37142c9a1dea9c68))
+
+
+
+
+
 # [4.19.0](https://github.com/lskjs/lskjs/compare/v4.18.0...v4.19.0) (2023-12-25)
 
 

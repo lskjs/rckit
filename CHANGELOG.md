@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.21.0](https://github.com/lskjs/rckit/compare/v4.20.0...v4.21.0) (2023-12-30)
+
+
+### Features
+
+* **breadcrumbs:** add breadcrumbs ([95dd1cc](https://github.com/lskjs/rckit/commit/95dd1cc743bf91737a1db2903a566e076108430e))
+* **button:** create button package ([0ac6afc](https://github.com/lskjs/rckit/commit/0ac6afcfd663770a7991b8ff4e8f87d1a02d8b5e))
+* **icons:** add new icons ([4e67a29](https://github.com/lskjs/rckit/commit/4e67a29a3d046e0acaefa87c37142c9a1dea9c68))
+* **navbar:** use breadcrumbs utils in navbar ([0d22d93](https://github.com/lskjs/rckit/commit/0d22d930a52c8537d687b0d2f4d3cc086ef2d92a))
+
+
+
+
+
 # [4.20.0](https://github.com/lskjs/rckit/compare/v4.19.0...v4.20.0) (2023-12-25)
 
 

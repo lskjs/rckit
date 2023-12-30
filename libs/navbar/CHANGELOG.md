@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.21.0](https://github.com/lskjs/lskjs/compare/v4.20.0...v4.21.0) (2023-12-30)
+
+
+### Features
+
+* **navbar:** use breadcrumbs utils in navbar ([0d22d93](https://github.com/lskjs/lskjs/commit/0d22d930a52c8537d687b0d2f4d3cc086ef2d92a))
+
+
+
+
+
 # [4.20.0](https://github.com/lskjs/lskjs/compare/v4.19.0...v4.20.0) (2023-12-25)
 
 
