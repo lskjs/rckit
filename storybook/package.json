@@ -30,6 +30,8 @@
   },
   "dependencies": {
     "@rckit/avatar": "workspace:^",
+    "@rckit/breadcrumbs": "workspace:^",
+    "@rckit/button": "workspace:^",
     "@rckit/debug": "workspace:^",
     "@rckit/form": "workspace:^",
     "@rckit/icons": "workspace:^",
@@ -37,6 +39,7 @@
     "@rckit/navbar": "workspace:^",
     "@rckit/secret-checkbox": "workspace:^",
     "@rckit/table": "workspace:^",
-    "bootstrap": "^5.3.2"
+    "bootstrap": "^5.3.2",
+    "react-bootstrap": "^2.9.2"
   }
 }

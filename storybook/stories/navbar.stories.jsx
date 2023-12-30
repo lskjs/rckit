@@ -30,7 +30,7 @@ const AppNavbar = (props = {}) => <BaseAppNavbar {...props} />;
 // import { Header } from './Header';
 
 export default {
-  title: 'AppNavbar',
+  title: 'rckit/navbar',
   component: AppNavbar,
   tags: ['autodocs'],
   parameters: {
@@ -38,15 +38,10 @@ export default {
   },
 };
 
+export const Default = {};
+
 export const NonContaner = {
   args: {
     container: 0,
   },
 };
-export const Contaner = {
-  args: {
-    container: true,
-  },
-};
-
-export const LoggedOut = {};
