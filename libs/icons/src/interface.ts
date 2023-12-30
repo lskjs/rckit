@@ -1,3 +1,7 @@
+export * from './blocked';
+export * from './skip';
+export * from './grabber';
+export * from './dots';
 export * from './alert';
 export * from './alertFill';
 export * from './arrowDown';
@@ -35,6 +39,7 @@ export * from './paste';
 export * from './pencil';
 export * from './people';
 export * from './person';
+export * from './plus';
 export * from './refresh';
 export * from './search';
 export * from './send';
