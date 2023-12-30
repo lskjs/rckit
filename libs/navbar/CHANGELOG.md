@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.22.2](https://github.com/lskjs/lskjs/compare/v4.22.1...v4.22.2) (2023-12-30)
+
+
+### Bug Fixes
+
+* **navbar:** nav bugs ([4944bba](https://github.com/lskjs/lskjs/commit/4944bbadf8bb3affe369643069ff55fb86a2df41))
+
+
+
+
+
 ## [4.22.1](https://github.com/lskjs/lskjs/compare/v4.22.0...v4.22.1) (2023-12-30)
 
 
