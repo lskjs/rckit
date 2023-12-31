@@ -349,6 +349,9 @@ importers:
 
   storybook:
     dependencies:
+      '@rckit/auth':
+        specifier: workspace:^
+        version: link:../libs/auth
       '@rckit/avatar':
         specifier: workspace:^
         version: link:../libs/avatar

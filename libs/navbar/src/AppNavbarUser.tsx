@@ -4,13 +4,14 @@ import { Link } from '@rckit/link';
 import React from 'react';
 import { Nav, NavDropdown } from 'react-bootstrap';
 
-import { AvatarWithTitle } from './AvatarWithTitle.js';
+import { NavbarProfileItem } from './NavbarProfileItem.js';
 
 type AppNavbarUserProps = React.PropsWithChildren<{
   variant?: string;
+  imageSize?: number;
 }>;
 
-export const AppNavbarUser = ({ variant }: AppNavbarUserProps) => {
+export const AppNavbarUser = ({ imageSize, variant }: AppNavbarUserProps) => {
   const { profileItems } = useAppMenuConfig();
   const { sessionStatus } = useAppSession();
   const user = useAppUser();
@@ -22,36 +23,14 @@ export const AppNavbarUser = ({ variant }: AppNavbarUserProps) => {
     return (
       <>
         <NavDropdown
-          title={
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-              }}
-            >
-              &nbsp;
-              <AvatarWithTitle title={title} src={avatar} size={24} />
-            </div>
-          }
+          title={<NavbarProfileItem title={title} src={avatar} imageSize={imageSize} />}
           menuVariant={variant}
         >
           {profileItems.map((item, index) => (
-            <NavDropdown.Item
-              as={Link}
-              key={index}
-              href={item.href}
-              active={item.active}
-              // style={{ display: 'flex', alignItems: 'center' }}
-            >
+            <NavDropdown.Item as={Link} key={index} href={item.href}>
               {item.title}
             </NavDropdown.Item>
           ))}
-          {/* <NavDropdown.Item as={Link} href="/cabinet/profile">
-            Profile
-          </NavDropdown.Item>
-          <NavDropdown.Item as={Link} href="/cabinet/settings">
-            Settings
-          </NavDropdown.Item> */}
           {Boolean(profileItems?.length) && <NavDropdown.Divider />}
           <NavDropdown.Item as={Link} href="/auth/logout">
             Logout

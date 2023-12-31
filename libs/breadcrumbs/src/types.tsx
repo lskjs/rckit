@@ -1,9 +1,12 @@
 export interface MenuItem {
-  type?: string;
-  types?: string[];
+  type?: string | string[];
+  types?: string | string[];
   title: string;
   href?: string;
-  active?: boolean;
-  hidden?: boolean;
+  icon?: React.ReactNode;
+  image?: string;
+
+  // active?: boolean;
   items?: MenuItem[];
+  hidden?: boolean;
 }

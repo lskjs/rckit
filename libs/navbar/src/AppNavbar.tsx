@@ -15,11 +15,15 @@ interface AppNavbarProps {
   expand?: string;
   activeHref?: string;
   className?: string;
+  imageSize?: number;
+  avatarSize?: number;
 }
 
 export const AppNavbar = ({
   logo = null,
   // menus: initMenus,
+  imageSize = 16,
+  avatarSize = 24,
   container = true,
   variant = 'dark',
   expand = 'lg',
@@ -28,29 +32,70 @@ export const AppNavbar = ({
   ...props
 }: AppNavbarProps) => {
   const { navItems, adminItems } = useAppMenuConfig();
-  // @ts-ignore
-  // console.log({ navItems });
 
   const user = useAppUser();
   const Wrapper = container ? Container : React.Fragment;
   return (
-    <Navbar bg={variant} variant={variant} expand={expand} className={className} {...props}>
-      <Wrapper>
-        <Navbar.Brand href="/">{logo || 'App Title'}</Navbar.Brand>
-        <Navbar.Toggle aria-controls="app-navbar" />
-        <Navbar.Collapse id="app-navbar">
-          <Nav className="me-auto">
-            <NavbarMenu variant={variant} items={navItems} activeHref={activeHref} />
-          </Nav>
-          <Nav style={{ display: 'flex' }}>
-            <AppNavbarDebug />
-            {user?.isAdmin && Boolean(adminItems?.length) && (
-              <NavbarMenu variant={variant} items={adminItems} activeHref={activeHref} />
-            )}
-            <AppNavbarUser variant={variant} />
-          </Nav>
-        </Navbar.Collapse>
-      </Wrapper>
-    </Navbar>
+    <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+  .navbar-nav {
+    // align-items: center;
+    // align-items: stretch;
+    // border: 1px blue dotted;
+    align-items: center;
+    display: flex;
+  }
+
+  @media (max-width: 991px) {
+    .navbar-nav {
+      align-items: stretch;
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar-nav {
+      align-items: center;
+    }
+  }
+    
+  .nav-link, .nav-link, nav-item {
+    // height: 100%;
+    // border: 1px yellow dotted;
+    display: flex;
+    align-items: center;
+  }
+  `,
+        }}
+      />
+      <Navbar bg={variant} variant={variant} expand={expand} className={className} {...props}>
+        <Wrapper>
+          <Navbar.Brand href="/">{logo || 'App Title'}</Navbar.Brand>
+          <Navbar.Toggle aria-controls="app-navbar" />
+          <Navbar.Collapse id="app-navbar">
+            <Nav className="me-auto">
+              <NavbarMenu
+                variant={variant}
+                items={navItems}
+                imageSize={imageSize}
+                activeHref={activeHref}
+              />
+            </Nav>
+            <Nav style={{ display: 'flex' }}>
+              <AppNavbarDebug />
+              {user?.isAdmin && Boolean(adminItems?.length) && (
+                <NavbarMenu
+                  variant={variant}
+                  items={adminItems}
+                  imageSize={imageSize}
+                  activeHref={activeHref}
+                />
+              )}
+              <AppNavbarUser imageSize={avatarSize} variant={variant} />
+            </Nav>
+          </Navbar.Collapse>
+        </Wrapper>
+      </Navbar>
+    </>
   );
 };

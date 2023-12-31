@@ -29,6 +29,7 @@
     "storybook": "^7.6.6"
   },
   "dependencies": {
+    "@rckit/auth": "workspace:^",
     "@rckit/avatar": "workspace:^",
     "@rckit/breadcrumbs": "workspace:^",
     "@rckit/button": "workspace:^",
