@@ -1,32 +1,36 @@
-import React from 'react';
+import React, { createContext, useContext } from 'react';
 
-import { AppMenuConfigContext, AppMenuConfigContextProps } from './useAppMenuConfig';
+import { MenuItem } from '../types.js';
+import { getAppMenuItems } from './getAppMenuItems.js';
 
-const isType = (type: string) => (item: any) =>
-  item.type === type ||
-  item.type?.includes(type) ||
-  item.types === type ||
-  item.types?.includes(type);
-
-export const AppMenuConfig = ({ items: rawItems = [], children }: any) => {
-  const items = ((typeof rawItems === 'function' ? rawItems() : rawItems) || []).filter(Boolean);
-  const navItems = items.filter(isType('nav'));
-  const adminItems = items.filter(isType('admin'));
-  const cabinetItems = items.filter(isType('cabinet'));
-  const profileItems = items.filter(isType('profile'));
-
-  const payload: AppMenuConfigContextProps = {
-    items,
-    navItems,
-    cabinetItems,
-    adminItems,
-    profileItems,
-  };
-
-  // @ts-ignore
-  // console.log({ navItems });
-  // @ts-ignore
-  // console.log({ payload });
-
-  return <AppMenuConfigContext.Provider value={payload}>{children}</AppMenuConfigContext.Provider>;
+export type AppMenuConfigContextProps = {
+  items?: MenuItem[] | ((ctx: any) => MenuItem[]);
 };
+export const AppMenuConfigContext = createContext<AppMenuConfigContextProps>({});
+export type AppMenuConfigProps = React.PropsWithChildren<AppMenuConfigContextProps>;
+export const AppMenuConfig = ({ items, children }: AppMenuConfigProps) => (
+  <AppMenuConfigContext.Provider value={{ items }}>{children}</AppMenuConfigContext.Provider>
+);
+
+export type AppMenuArgsContextProps = {
+  items?: MenuItem[] | ((args: any) => MenuItem[]);
+};
+export const AppMenuArgsContext = createContext<AppMenuArgsContextProps>({});
+export type AppMenuArgsProps = React.PropsWithChildren<AppMenuArgsContextProps>;
+export const AppMenuArgs = ({ children, ...props }: AppMenuArgsProps) => (
+  <AppMenuArgsContext.Provider value={props}>{children}</AppMenuArgsContext.Provider>
+);
+
+export interface AppMenuConfigRes {
+  items: MenuItem[];
+  navItems: MenuItem[];
+  cabinetItems: MenuItem[];
+  adminItems: MenuItem[];
+  profileItems: MenuItem[];
+}
+
+export function useAppMenuConfig(): AppMenuConfigRes {
+  const config = useContext(AppMenuConfigContext);
+  const args = useContext(AppMenuArgsContext);
+  return getAppMenuItems(config, args);
+}

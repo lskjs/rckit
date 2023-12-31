@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb, Col, Row } from 'react-bootstrap';
 
-import { useAppMenuConfig } from './AppMenuConfig/useAppMenuConfig.js';
+import { useAppMenuConfig } from './AppMenuConfig/AppMenuConfig.js';
 import { BreadcrumbItem } from './BreadcrumbItem.js';
 import { MenuItem } from './types.js';
 import { findBreadcrumbs } from './utils.js';

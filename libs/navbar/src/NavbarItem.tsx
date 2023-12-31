@@ -48,6 +48,8 @@ export const NavbarItem = ({
             // src={icon}
             src={image}
             style={{ width: imageSize, height: imageSize }}
+            width={imageSize}
+            height={imageSize}
             alt={title}
           />
         </NavbarItemWrap>

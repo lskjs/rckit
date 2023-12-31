@@ -17,6 +17,7 @@ interface AppNavbarProps {
   className?: string;
   imageSize?: number;
   avatarSize?: number;
+  ctx?: any;
 }
 
 export const AppNavbar = ({
@@ -32,7 +33,6 @@ export const AppNavbar = ({
   ...props
 }: AppNavbarProps) => {
   const { navItems, adminItems } = useAppMenuConfig();
-
   const user = useAppUser();
   const Wrapper = container ? Container : React.Fragment;
   return (

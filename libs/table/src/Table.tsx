@@ -33,13 +33,13 @@ export const Table = ({
   columns,
   search,
   components,
-  initialState,
+  initialState = {},
 }: TableProps) => {
   // if (!data && query)  {
   //   const { data: raw, isFetching, error, status, refetch } = query
 
   // }
-  const { isFetching } = query;
+  const isFetching = query?.isFetching || false;
   const isInfinityQuery = Boolean(query?.data?.pages);
   let items: any[] = [];
   if (!data && query) {

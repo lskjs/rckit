@@ -1,0 +1,17 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+/* @import "~@rckit/table/lib/index.css"; */
+@import "../node_modules/@rckit/table/lib/index.css";
+
+
+:root {
+  --blb-table-primary-color: #0141ff;
+  --blb-table-primary-light-color: #dedeff;
+  --blb-table-border-color: #e0e0e0;
+  --blb-table-light-color: #f0f0ff;
+  --blb-table-white-color: #ffffff;
+  --blb-table-black-color: #000000;
+
+  --blb-table-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --blb-table-border-width: 1px;
+}
+
