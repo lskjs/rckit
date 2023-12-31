@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.23.0](https://github.com/lskjs/rckit/compare/v4.22.2...v4.23.0) (2023-12-31)
+
+
+### Features
+
+* **navbar:** improve nav items content center ([b49842a](https://github.com/lskjs/rckit/commit/b49842a0a18ae1df38233d355cefdfee9a85df03))
+
+
+
+
+
 ## [4.22.2](https://github.com/lskjs/rckit/compare/v4.22.1...v4.22.2) (2023-12-30)
 
 **Note:** Version bump only for package @rckit/storybook

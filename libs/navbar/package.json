@@ -1,6 +1,6 @@
 {
   "name": "@rckit/navbar",
-  "version": "4.22.2",
+  "version": "4.23.0",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
