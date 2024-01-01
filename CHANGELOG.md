@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.24.0](https://github.com/lskjs/rckit/compare/v4.23.1...v4.24.0) (2024-01-01)
+
+
+### Features
+
+* **table:** improve all table cases ([13054de](https://github.com/lskjs/rckit/commit/13054de9b6748ed12afc22b9c967a3ea1dcb3be6))
+
+
+
+
+
 ## [4.23.1](https://github.com/lskjs/rckit/compare/v4.23.0...v4.23.1) (2023-12-31)
 
 
