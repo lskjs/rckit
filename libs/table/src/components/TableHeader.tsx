@@ -1,7 +1,7 @@
 import { SortDirection } from '@tanstack/react-table';
 import React, { ReactNode } from 'react';
 
-import { SortIcon } from './SortIcon.js';
+import { SortIcon } from '../icons/SortIcon.js';
 // import styles from './TableHeader.module.css';
 const styles = { clickable: 'rctbl_tableheader__clickable' };
 

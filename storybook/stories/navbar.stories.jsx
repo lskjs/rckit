@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { AppSessionContext } from '@rckit/auth';
 import { AppMenuConfig } from '@rckit/breadcrumbs';
 import { Bot, Plus } from '@rckit/icons';
-import { AppNavbar as BaseAppNavbar } from '@rckit/navbar';
+import { AppNavbar } from '@rckit/navbar';
 import React from 'react';
 
 //  'https://picsum.photos/32/32'
@@ -141,24 +141,24 @@ const menus = ({ botId = 123, botTitle = 'The Bot', botAvatar } = {}) =>
     },
   ].filter(Boolean);
 
-const payload = {
-  session: {
-    user: {
-      id: 1,
-      name: 'John Smith',
-      avatar: image,
-      role: 'admin',
-    },
+const session = {
+  user: {
+    id: 1,
+    name: 'John Smith',
+    avatar: image,
+    role: 'admin',
   },
 };
 
-const AppNavbar = (props = {}) => (
-  <AppSessionContext.Provider value={payload}>
-    <AppMenuConfig items={menus}>
-      <BaseAppNavbar {...props} />
-    </AppMenuConfig>
-  </AppSessionContext.Provider>
-);
+const decorators = [
+  (Story) => (
+    <AppSessionContext.Provider value={{ session }}>
+      <AppMenuConfig items={menus}>
+        <Story />
+      </AppMenuConfig>
+    </AppSessionContext.Provider>
+  ),
+];
 
 export default {
   title: 'rckit/navbar',
@@ -167,6 +167,7 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
+  decorators,
 };
 
 export const Default = {};

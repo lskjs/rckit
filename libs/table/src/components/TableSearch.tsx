@@ -1,9 +1,9 @@
-import { CrossCircle as ClearIcon, Filter, Refresh, Search as SearchIcon } from '@rckit/icons';
+import { CrossCircle as ClearIcon, Filter, Search as SearchIcon } from '@rckit/icons';
 import React, { useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
+import { RefreshIcon } from '../icons/RefreshIcon.js';
 import type { TableSearchProps } from '../types.js';
-import { getSpinAnimationStyles } from '../utils/getSpinAnimationStyles.js';
 // import styles from './TableSearch.module.css';
 const styles = {
   wrapper: 'rctbl_tablesearch__wrapper',
@@ -63,7 +63,7 @@ export const TableSearch = ({
       )}
       {showRefresh && (
         <button className={styles.filterButton} onClick={refresh}>
-          <Refresh style={getSpinAnimationStyles(isFetching)} />
+          <RefreshIcon animate={isFetching} />
         </button>
       )}
     </div>

@@ -46,23 +46,25 @@ const IconBox = ({ name, children }) => (
     <div style={{ marginTop: '10px' }}>{name}</div>
   </div>
 );
-const Icons = ({ title, icons }) => (
+const Icons = ({ title, icons } = {}) => (
   <>
-    <h2>{title}</h2>
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-        gap: '10px',
-        width: 1000,
-      }}
-    >
-      {Object.entries(icons).map(([name, IconComponent]) => (
-        <IconBox key={name} name={name}>
-          <IconComponent />
-        </IconBox>
-      ))}
-    </div>
+    {title && <h2>{title}</h2>}
+    {icons && (
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+          gap: '10px',
+          width: 1000,
+        }}
+      >
+        {Object.entries(icons).map(([name, IconComponent]) => (
+          <IconBox key={name} name={name}>
+            <IconComponent />
+          </IconBox>
+        ))}
+      </div>
+    )}
   </>
 );
 
@@ -70,6 +72,7 @@ const Icons = ({ title, icons }) => (
 export default {
   title: 'rckit/icons',
   // component: ArrowDownIcon,
+  // component: Icons,
   component: () => (
     <>
       <Icons title="Interface" icons={interfaceIcons} />
@@ -82,7 +85,7 @@ export default {
     layout: 'centered',
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -90,29 +93,21 @@ export default {
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
+export const Example = {
+  // component: () => (
+  //   <>
+  //     <Icons title="Interface" icons={interfaceIcons} />
+  //     <Icons title="Logos" icons={logosIcons} />
+  //   </>
+  // ),
+  // args: {
+  //   title: 'Interface',
+  //   // icons: interfaceIcons,
+  // },
 };
-
-export const Secondary = {
-  args: {
-    label: 'Button',
-  },
-};
-
-export const Large = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
+// export const Logos = {
+//   args: {
+//     title: 'Interface',
+//     // icons: logosIcons,
+//   },
+// };

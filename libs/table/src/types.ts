@@ -16,8 +16,8 @@ export interface QueryParams {
 
 export type ITablePagination = (props: {
   pageCount: number;
-  pageIndex: number;
-  setPageIndex: ({ selected }: { selected: number }) => void;
+  initialPage: number;
+  onPageChange: ({ selected }: { selected: number }) => void;
 }) => React.ReactElement;
 
 export interface TableMessageProps {
@@ -46,7 +46,7 @@ export interface TableFilterProps<T = any> {
   value?: T;
   onSubmit: (value: T) => any;
 }
-export type ITableFilter = () => React.ReactElement;
+export type ITableFilter = (props: TableFilterProps) => React.ReactElement;
 
 export type TableColumnWidth = string | number | null;
 export type TableColumn<TData, TValue> = ColumnDef<TData, TValue> & {
@@ -54,14 +54,19 @@ export type TableColumn<TData, TValue> = ColumnDef<TData, TValue> & {
 };
 
 export interface TableProps {
-  data: {
-    data: Array<Record<string, unknown>>;
+  data?: {
+    items?: Array<Record<string, unknown>>;
+    pages?: Array<Record<string, unknown>>;
     count?: number;
   };
+  query?: any;
+  count?: number;
+  limit?: number;
   isLoading: boolean;
   onChange: Dispatch<SetStateAction<QueryParams>>;
   initialState: QueryParams;
-  template?: string[];
+  enableMultiSort?: boolean;
+  initialOpenFilter?: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   columns: any[];
   search?: string;
@@ -71,4 +76,5 @@ export interface TableProps {
     Search?: ITableSearch;
     Filter?: ITableFilter;
   };
+  debug?: boolean;
 }

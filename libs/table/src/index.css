@@ -65,7 +65,7 @@
   flex-direction: column;
   gap: 8px;
 }
-.rctbl_tablemessage__title  {
+.rctbl_tablemessage__title {
   font-size: 16px;
   font-weight: 500;
   color: var(--blb-table-black-color);
@@ -75,7 +75,6 @@
   font-weight: 400;
   color: var(--blb-table-black-color);
 }
-
 
 /* TablePagination.module.css */
 .rctbl_tablepagination__container {
@@ -133,7 +132,6 @@
   cursor: default;
 }
 
-
 @media screen and (max-width: 768px) {
   .rctbl_tablepagination__container {
     justify-content: center;
@@ -143,7 +141,6 @@
     display: none;
   }
 }
-
 
 /* TableSearch.module.css */
 .rctbl_tablesearch__wrapper {
@@ -218,4 +215,39 @@
   overflow: hidden;
   overflow-x: scroll;
   text-overflow: ellipsis;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-mirror {
+  from {
+    transform: scaleX(-1) rotate(360deg);
+  }
+  to {
+    transform: scaleX(-1) rotate(0deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+    
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes spin-mirror-reverse {
+  from {
+    transform: scaleX(-1) rotate(0deg);
+  }
+  to {
+    transform: scaleX(-1) rotate(360deg);
+  }
 }

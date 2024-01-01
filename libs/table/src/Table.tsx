@@ -1,8 +1,6 @@
-// @ts-nocheck
-
-import { isDev } from '@lsk4/env';
 import { getCoreRowModel, SortingState, useReactTable } from '@tanstack/react-table';
 import React, { useEffect, useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 import {
   ColGroup,
@@ -22,37 +20,67 @@ const styles = {
   filterButton: 'rctbl_root__filterButton',
 };
 
-const isDebug = isDev && false;
+// const isDefaultDebug = isDev && true;
+const isDefaultDebug = false;
+// console.log({ isDefaultDebug });
+type MessageType = 'empty' | 'loading' | null;
+
+const InfinityPagination = ({ isLoading, colSpan, onClick, children, ...props }: any) => (
+  <tbody>
+    <tr>
+      <td colSpan={colSpan}>
+        <div className="d-grid gap-2">
+          <button
+            // variant="light"
+            disabled={isLoading}
+            onClick={onClick}
+            {...props}
+          >
+            {children}
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+);
 
 export const Table = ({
   query,
-  data,
-  count,
+  data: rawData,
+  count: initCount,
+  limit: initLimit,
   initialOpenFilter = false,
+  enableMultiSort = true,
   onChange,
   columns,
   search,
   components,
-  initialState = {},
+  initialState = { limit: 10 },
+  debug: isDebug = isDefaultDebug,
 }: TableProps) => {
-  // if (!data && query)  {
-  //   const { data: raw, isFetching, error, status, refetch } = query
-
-  // }
+  const data = rawData || query?.data || [];
   const isFetching = query?.isFetching || false;
-  const isInfinityQuery = Boolean(query?.data?.pages);
+  const isInfinityQuery = Boolean(query?.fetchNextPage);
+  let count: number = initCount || 0;
+  let limit: number = initLimit || initialState.limit || 0;
   let items: any[] = [];
-  if (!data && query) {
-    // eslint-disable-next-line no-nested-ternary, no-param-reassign
-    items = (isInfinityQuery ? flatPages(query?.data?.pages) : []) || [];
+
+  if (Array.isArray(data)) {
+    items = data;
+    if (!count) count = data.length;
+    if (!limit) limit = data.length;
+  } else if (data?.pages) {
+    items = flatPages(data?.pages) || [];
+    const page0 = data?.pages?.[0];
+    if (!count) count = page0?.count || 0;
+    if (!limit) limit = page0?.items?.length || 0;
+  } else if (data?.items) {
+    items = data?.items || [];
+    const page0 = data;
+    if (!count) count = page0?.count || 0;
+    if (!limit) limit = page0?.items?.length || 0;
   }
-  let pageCount = 0;
-  if (!count && query) {
-    // eslint-disable-next-line no-nested-ternary, no-param-reassign
-    count = 8999;
-    pageCount = data?.count ? Math.ceil(data.count / initialState.limit) : 0;
-    // count = isInfinityQuery ? query?.data?.pageCount : query?.data?.length;
-  }
+  const pageCount = limit ? Math.ceil(count / limit) : 0;
 
   const [sorting, setSorting] = useState<SortingState>(initialState.sort || []);
   const [openFilter, setOpenFilter] = useState<boolean>(initialOpenFilter);
@@ -67,42 +95,80 @@ export const Table = ({
     getCoreRowModel: getCoreRowModel(),
     enableSortingRemoval: false,
     manualPagination: true,
+    enableMultiSort,
+    debugTable: isDebug,
   });
   const { rows } = table.getRowModel();
   const isEmpty = rows.length === 0 && !isFetching;
   const isLoading = rows.length === 0 && isFetching;
 
   // eslint-disable-next-line no-nested-ternary
-  const messageType = (isEmpty ? 'empty' : isLoading ? 'loading' : null) as
-    | 'empty'
-    | 'loading'
-    | null;
+  const messageType = (isEmpty ? 'empty' : isLoading ? 'loading' : null) as MessageType;
   const Message = components?.Message || TableMessage;
   const Pagination = components?.Pagination || TablePagination;
+  const colSpan = table.getHeaderGroups()[0].headers.length;
+
   const content = messageType ? (
     <Message type={messageType} />
   ) : (
     <>
       <div className={styles.tableWrapper}>
-        <table>
-          <ColGroup columns={columns} />
-          <THead headerGroups={table.getHeaderGroups()} onChange={onChange} />
-          <TBody rows={rows} />
-          {isDebug && (
-            <thead>
-              <ColGroup columns={columns} show />
-            </thead>
-          )}
-        </table>
+        <InfiniteScroll
+          dataLength={rows.length}
+          next={query?.fetchNextPage}
+          hasMore={query?.hasNextPage}
+          loader={<div />}
+        >
+          <table>
+            <ColGroup columns={columns} />
+            <THead headerGroups={table.getHeaderGroups()} onChange={onChange} />
+            {query?.hasPreviousPage && (
+              <InfinityPagination
+                colSpan={colSpan}
+                isLoading={isLoading}
+                onClick={query?.fetchPreviousPage}
+              >
+                {query?.isFetchingPreviousPage ? 'Loading...' : 'Show prev'}
+              </InfinityPagination>
+            )}
+            <TBody rows={rows} />
+            {query?.hasNextPage && (
+              <InfinityPagination
+                colSpan={colSpan}
+                isLoading={isLoading}
+                onClick={query?.fetchNextPage}
+              >
+                {query?.isFetchingNextPage ? 'Loading...' : 'Show next'}
+              </InfinityPagination>
+            )}
+            {isDebug && (
+              <thead>
+                <ColGroup columns={columns} show />
+              </thead>
+            )}
+          </table>
+        </InfiniteScroll>
       </div>
-      <Pagination
-        pageCount={table.getPageCount()}
-        initialPage={table.getState().pagination.pageIndex}
-        onPageChange={({ selected }) => {
-          onChange((prev) => ({ ...prev, skip: initialState.limit * selected }));
-          table.setPageIndex(selected);
-        }}
-      />
+      {!isInfinityQuery && (
+        <Pagination
+          pageCount={table.getPageCount()}
+          initialPage={table.getState().pagination.pageIndex}
+          onPageChange={({ selected }) => {
+            onChange((prev) => ({ ...prev, offset: limit * selected }));
+            table.setPageIndex(selected);
+          }}
+        />
+      )}
+      {isDebug && (
+        <>
+          {/* <div>
+            Fetched {flatData.length} of {totalDBRowCount} Rows.
+          </div>
+          <div>
+            <button onClick={() => rerender()}>Force Rerender</button>
+          </div> */}
+        </>
+      )}
     </>
   );
 
@@ -144,7 +210,7 @@ export const Table = ({
           </button>
         )}
       </Search> */}
-      {openFilter && Filter && <Filter onSubmit={onChange} />}
+      {openFilter && Filter && <Filter onSubmit={onChange as any} />}
       {content}
     </div>
   );

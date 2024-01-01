@@ -1,7 +1,7 @@
-export function getSpinAnimationStyles(isSpin = true) {
+export function getSpinAnimationStyles({ isSpin = true, isReverse = false, isMirror = false }) {
+  const animationName = `spin${isMirror ? '-mirror' : ''}${isReverse ? '-reverse' : ''}`;
   return {
-    // transform: isSpin ? 'scale(0)' : 'scale(1)',
-    // transition: 'transform 0.3s ease-in-out, border-radius 0.3s ease-in-out',
-    animation: isSpin ? `spin 1s linear infinite` : 'none',
+    transform: isMirror ? 'scaleX(-1)' : 'none',
+    animation: isSpin ? `${animationName} 1s linear infinite` : 'none',
   };
 }
