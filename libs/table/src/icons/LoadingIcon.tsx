@@ -11,15 +11,25 @@ export const LoadingIcon = ({
 }: LoadingIconProps) => (
   <span
     style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      position: 'relative',
-      width: '1em',
+      display: 'inline-block',
+      // paddingTop: 5,
+      // paddingBottom: -5,
     }}
   >
-    <Dot {...props} />
-    <Dot {...props} />
-    <Dot {...props} />
+    <span
+      style={{
+        display: 'inline-flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        // width: '1em',
+        height: '1em',
+        fontSize: '0.6em',
+      }}
+    >
+      <Dot className="ld1" {...props} />
+      <Dot className="ld2" {...props} />
+      <Dot className="ld3" {...props} />
+    </span>
   </span>
 );

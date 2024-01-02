@@ -53,9 +53,10 @@ function compare(value1, value2) {
 }
 
 let i = 0;
+const mult = 100;
 export async function fetchItems({ limit = 10, offset = 0, filter, search, sort = [] }) {
   // console.log('[fetchItems]', omitNull({ limit, offset, filter, search }));
-  await delay(i++ * 100);
+  await delay(i++ * mult);
   let items = totalItems;
   if (filter) {
     items = items.filter((item) => isMatchFilter(item, filter));

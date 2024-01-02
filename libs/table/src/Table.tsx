@@ -10,6 +10,7 @@ import {
   TBody,
   THead,
 } from './components/index.js';
+import { LoadingIcon } from './icons/LoadingIcon.js';
 // import styles from './Table.module.css';
 import { TableProps } from './types';
 import { flatPages } from './utils/flatPages';
@@ -17,7 +18,8 @@ import { flatPages } from './utils/flatPages';
 const styles = {
   wrapper: 'rctbl_root__wrapper',
   tableWrapper: 'rctbl_root__tableWrapper',
-  filterButton: 'rctbl_root__filterButton',
+  // filterButton: 'rctbl_root__filterButton',
+  filterButton: 'rctbl_tablesearch__filterButton',
 };
 
 // const isDefaultDebug = isDev && true;
@@ -30,12 +32,7 @@ const InfinityPagination = ({ isLoading, colSpan, onClick, children, ...props }:
     <tr>
       <td colSpan={colSpan}>
         <div className="d-grid gap-2">
-          <button
-            // variant="light"
-            disabled={isLoading}
-            onClick={onClick}
-            {...props}
-          >
+          <button className={styles.filterButton} disabled={isLoading} onClick={onClick} {...props}>
             {children}
           </button>
         </div>
@@ -128,7 +125,8 @@ export const Table = ({
                 isLoading={isLoading}
                 onClick={query?.fetchPreviousPage}
               >
-                {query?.isFetchingPreviousPage ? 'Loading...' : 'Show prev'}
+                {/* <LoadingIcon /> */}
+                {query?.isFetchingPreviousPage ? <LoadingIcon /> : 'Show prev'}
               </InfinityPagination>
             )}
             <TBody rows={rows} />
@@ -138,7 +136,7 @@ export const Table = ({
                 isLoading={isLoading}
                 onClick={query?.fetchNextPage}
               >
-                {query?.isFetchingNextPage ? 'Loading...' : 'Show next'}
+                {query?.isFetchingNextPage ? <LoadingIcon /> : 'Show next'}
               </InfinityPagination>
             )}
             {isDebug && (
