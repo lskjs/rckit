@@ -11,6 +11,7 @@ import {
   THead,
 } from './components/index.js';
 import { LoadingIcon } from './icons/LoadingIcon.js';
+import { normalizeSortParam } from './QueryListParams.js';
 // import styles from './Table.module.css';
 import { TableProps } from './types';
 import { flatPages } from './utils/flatPages';
@@ -62,6 +63,7 @@ export const Table = ({
   let limit: number = initLimit || initialState.limit || 0;
   let items: any[] = [];
 
+  // NOTE: жесть какая-то
   if (Array.isArray(data)) {
     items = data;
     if (!count) count = data.length;
@@ -79,7 +81,8 @@ export const Table = ({
   }
   const pageCount = limit ? Math.ceil(count / limit) : 0;
 
-  const [sorting, setSorting] = useState<SortingState>(initialState.sort || []);
+  const normalizedSort = normalizeSortParam(initialState.sort);
+  const [sorting, setSorting] = useState<SortingState>(normalizedSort);
   const [openFilter, setOpenFilter] = useState<boolean>(initialOpenFilter);
   const table = useReactTable({
     data: items.map((item) => item) ?? [],

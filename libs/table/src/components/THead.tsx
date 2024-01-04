@@ -1,12 +1,12 @@
 import { flexRender, HeaderGroup } from '@tanstack/react-table';
 import React, { Dispatch, SetStateAction } from 'react';
 
-import type { QueryParams } from '../types.js';
+import { packSortParam, QueryListParams } from '../QueryListParams.js';
 import { TableHeader } from './TableHeader.js';
 
 interface THeadProps {
   headerGroups: HeaderGroup<Record<string, unknown>>[];
-  onChange: Dispatch<SetStateAction<QueryParams>>;
+  onChange: Dispatch<SetStateAction<QueryListParams>>;
 }
 
 export const THead = ({ headerGroups, onChange }: THeadProps) => (
@@ -27,9 +27,10 @@ export const THead = ({ headerGroups, onChange }: THeadProps) => (
                 if (enableSorting) {
                   header.column.toggleSorting();
                   const desc = sorting !== 'desc';
+                  const sort = packSortParam([{ id: header.column.id, desc }]);
                   onChange((prev) => ({
                     ...prev,
-                    sort: [{ id: header.column.id, desc }],
+                    sort,
                   }));
                 }
               }}

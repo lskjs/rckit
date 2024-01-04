@@ -318,6 +318,9 @@ importers:
 
   libs/table:
     dependencies:
+      '@lsk4/algos':
+        specifier: ^4.5.0
+        version: 4.5.0
       '@lsk4/env':
         specifier: ^4.6.0
         version: 4.6.0

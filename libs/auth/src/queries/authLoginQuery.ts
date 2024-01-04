@@ -9,17 +9,14 @@ export interface AuthLoginParams {
   password: string;
 }
 export interface AuthLoginResponse {
-  data: {
-    otp: Otp;
-    session: Session;
-  };
+  otp: Otp;
+  session: Session;
 }
 export async function fetchAuthLogin(
   params: AuthLoginParams,
   { apiClient = defaultApiClient }: ApiClientOptions = {},
 ) {
-  // TODO: change any
-  const { data } = await apiClient.request<any, AuthLoginResponse>({
+  const { data } = await apiClient.request<AuthLoginResponse>({
     method: 'post',
     url: '/api/auth/login',
     data: params,

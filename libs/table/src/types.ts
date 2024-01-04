@@ -1,18 +1,7 @@
 import type { ColumnDef } from '@tanstack/react-table';
 import React, { Dispatch, SetStateAction } from 'react';
 
-export interface QueryParams {
-  limit: number;
-  filter?: {
-    [key: string]: string | number | Array<number | null> | boolean;
-  };
-  search?: string;
-  skip?: number;
-  sort?: {
-    id: string;
-    desc: boolean;
-  }[];
-}
+import { QueryListParams } from './QueryListParams';
 
 export type ITablePagination = (props: {
   pageCount: number;
@@ -53,7 +42,8 @@ export type TableColumn<TData, TValue> = ColumnDef<TData, TValue> & {
   width?: TableColumnWidth;
 };
 
-export interface TableProps {
+// eslint-disable-next-line @typescript-eslint/ban-types
+export interface TableProps<T = {}> {
   data?: {
     items?: Array<Record<string, unknown>>;
     pages?: Array<Record<string, unknown>>;
@@ -63,8 +53,8 @@ export interface TableProps {
   count?: number;
   limit?: number;
   isLoading: boolean;
-  onChange: Dispatch<SetStateAction<QueryParams>>;
-  initialState: QueryParams;
+  onChange: Dispatch<SetStateAction<QueryListParams<T>>>;
+  initialState: QueryListParams<T>;
   enableMultiSort?: boolean;
   initialOpenFilter?: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
