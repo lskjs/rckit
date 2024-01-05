@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.25.2](https://github.com/lskjs/rckit/compare/v4.25.1...v4.25.2) (2024-01-05)
+
+
+### Bug Fixes
+
+* **avatar:** add optional as ([59215bc](https://github.com/lskjs/rckit/commit/59215bc3e0d849a6b68e20725f066caf5718c496))
+
+
+
+
+
 ## [4.25.1](https://github.com/lskjs/rckit/compare/v4.25.0...v4.25.1) (2024-01-04)
 
 

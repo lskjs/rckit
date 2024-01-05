@@ -1,6 +1,6 @@
 {
   "name": "@rckit/storybook",
-  "version": "4.25.1",
+  "version": "4.25.2",
   "description": "",
   "main": "index.js",
   "private": true,
