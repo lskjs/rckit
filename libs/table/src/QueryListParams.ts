@@ -17,6 +17,7 @@ export interface QueryListParams<T = {}> {
   filter?: T;
   search?: string;
   sort?: QueryListSortParam;
+  count?: boolean;
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-types

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
-  as: React.ElementType | string;
+  as?: React.ElementType | string;
   src?: string;
   id?: string;
   _id?: string;
