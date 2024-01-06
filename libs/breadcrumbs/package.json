@@ -1,6 +1,6 @@
 {
   "name": "@rckit/breadcrumbs",
-  "version": "4.23.1",
+  "version": "4.25.3",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,

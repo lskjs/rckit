@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.25.3](https://github.com/lskjs/lskjs/compare/v4.25.2...v4.25.3) (2024-01-06)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** findBreadcrumbs deep ([0ddc2e6](https://github.com/lskjs/lskjs/commit/0ddc2e6056c2ff064f67c0b8c783898c3d2cf38f))
+
+
+
+
+
 ## [4.23.1](https://github.com/lskjs/lskjs/compare/v4.23.0...v4.23.1) (2023-12-31)
 
 

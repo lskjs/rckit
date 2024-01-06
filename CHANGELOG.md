@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.25.3](https://github.com/lskjs/rckit/compare/v4.25.2...v4.25.3) (2024-01-06)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** findBreadcrumbs deep ([0ddc2e6](https://github.com/lskjs/rckit/commit/0ddc2e6056c2ff064f67c0b8c783898c3d2cf38f))
+
+
+
+
+
 ## [4.25.2](https://github.com/lskjs/rckit/compare/v4.25.1...v4.25.2) (2024-01-05)
 
 
