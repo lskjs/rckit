@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.25.4](https://github.com/lskjs/lskjs/compare/v4.25.3...v4.25.4) (2024-01-06)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** add menu parents ([e6b57e0](https://github.com/lskjs/lskjs/commit/e6b57e000147f2d13230b6219ba22d0eae640eb1))
+
+
+
+
+
 ## [4.25.2](https://github.com/lskjs/lskjs/compare/v4.25.1...v4.25.2) (2024-01-05)
 
 

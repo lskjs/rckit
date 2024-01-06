@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.25.4](https://github.com/lskjs/lskjs/compare/v4.25.3...v4.25.4) (2024-01-06)
+
+**Note:** Version bump only for package @rckit/navbar
+
+
+
+
+
 ## [4.25.3](https://github.com/lskjs/lskjs/compare/v4.25.2...v4.25.3) (2024-01-06)
 
 **Note:** Version bump only for package @rckit/navbar
