@@ -52,7 +52,7 @@ export interface TableProps<T = {}> {
   query?: any;
   count?: number;
   limit?: number;
-  isLoading: boolean;
+  // isLoading: boolean;
   onChange: Dispatch<SetStateAction<QueryListParams<T>>>;
   initialState: QueryListParams<T>;
   enableMultiSort?: boolean;

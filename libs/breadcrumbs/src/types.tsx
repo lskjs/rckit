@@ -7,6 +7,7 @@ export interface MenuItem {
   image?: string;
 
   // active?: boolean;
+  parents?: MenuItem[];
   items?: MenuItem[];
   hidden?: boolean;
 }
