@@ -14,7 +14,7 @@ import { LoadingIcon } from './icons/LoadingIcon.js';
 import { normalizeSortParam } from './QueryListParams.js';
 // import styles from './Table.module.css';
 import { TableProps } from './types';
-import { flatPages } from './utils/flatPages';
+import { extractItems } from './utils/extractItems.js';
 
 const styles = {
   wrapper: 'rctbl_root__wrapper',
@@ -68,15 +68,11 @@ export const Table = ({
     items = data;
     if (!count) count = data.length;
     if (!limit) limit = data.length;
-  } else if (data?.pages) {
-    items = flatPages(data?.pages) || [];
-    const page0 = data?.pages?.[0];
+  } else if (data?.pages || data?.items) {
+    const page0 = data?.pages?.[0] || data;
+    items = extractItems(data) || [];
     if (!count) count = page0?.count || 0;
-    if (!limit) limit = page0?.items?.length || 0;
-  } else if (data?.items) {
-    items = data?.items || [];
-    const page0 = data;
-    if (!count) count = page0?.count || 0;
+    // TODO: плохая эвристика
     if (!limit) limit = page0?.items?.length || 0;
   }
   const pageCount = limit ? Math.ceil(count / limit) : 0;
