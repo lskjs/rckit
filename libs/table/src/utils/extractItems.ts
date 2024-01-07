@@ -6,7 +6,7 @@ type Book<T> = {
 };
 
 export function extractItems<T>(pageOrBook: Book<T> | Page<T>): T[] {
-  if (!pageOrBook) return [];
-  const pages = 'pages' in pageOrBook ? pageOrBook.pages : [pageOrBook];
+  // eslint-disable-next-line no-nested-ternary
+  const pages = pageOrBook ? ('pages' in pageOrBook ? pageOrBook.pages : [pageOrBook]) : [];
   return pages.map((page) => page.items || []).flat();
 }
