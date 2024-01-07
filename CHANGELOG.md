@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.26.0](https://github.com/lskjs/rckit/compare/v4.25.4...v4.26.0) (2024-01-07)
+
+
+### Features
+
+* **table:** improve extractItems ([d90d1d4](https://github.com/lskjs/rckit/commit/d90d1d40f32c786ae58c51d42efbae4a7498cf13))
+
+
+
+
+
 ## [4.25.4](https://github.com/lskjs/rckit/compare/v4.25.3...v4.25.4) (2024-01-06)
 
 
