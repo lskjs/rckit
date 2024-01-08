@@ -53,6 +53,16 @@
       "import": "./lib/*.js",
       "types": "./cjs/*.d.ts",
       "default": "./cjs/*.js"
+    },
+    "./icons": {
+      "import": "./lib/icons/index.js",
+      "types": "./cjs/icons/index.d.ts",
+      "default": "./cjs/icons/index.js"
+    },
+    "./icons/*": {
+      "import": "./lib/icons/*.js",
+      "types": "./cjs/icons/*.d.ts",
+      "default": "./cjs/icons/*.js"
     }
   },
   "_size-limit": [

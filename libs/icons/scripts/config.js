@@ -35,6 +35,7 @@ export const config = {
       comments: { export: 'Comments', import: 'GoCommentDiscussion' },
       copy: { export: 'Copy', import: 'GoCopy' },
       cross: { export: 'Cross', import: 'GoX' },
+      info: { export: 'Info', import: 'GoInfo' },
       crossCircle: { export: 'CrossCircle', import: 'GoXCircle' },
       dot: { export: 'Dot', import: 'GoDotFill' },
       dots: { export: 'Dots', import: 'GoKebabHorizontal' },
