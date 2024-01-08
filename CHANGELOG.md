@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.26.2](https://github.com/lskjs/rckit/compare/v4.26.1...v4.26.2) (2024-01-08)
+
+
+### Bug Fixes
+
+* **navbar:** inline styles ([4eea34a](https://github.com/lskjs/rckit/commit/4eea34aa890e5278d42b1730e09ce630b92772fd))
+
+
+
+
+
 ## [4.26.1](https://github.com/lskjs/rckit/compare/v4.26.0...v4.26.1) (2024-01-07)
 
 
