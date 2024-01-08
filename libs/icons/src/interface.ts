@@ -23,6 +23,7 @@ export * from './dot';
 export * from './dots';
 export * from './duplicate';
 export * from './eye';
+export * from './image';
 export * from './eyeClosed';
 export * from './fileMedia';
 export * from './filter';

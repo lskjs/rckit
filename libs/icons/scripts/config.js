@@ -41,6 +41,7 @@ export const config = {
       dots: { export: 'Dots', import: 'GoKebabHorizontal' },
       duplicate: { export: 'Duplicate', import: 'GoDuplicate' },
       eye: { export: 'Eye', import: 'GoEye' },
+      image: { export: 'Image', import: 'GoImage' },
       eyeClosed: { export: 'EyeClosed', import: 'GoEyeClosed' },
       fileMedia: { export: 'FileMedia', import: 'GoFileMedia' },
       filter: { export: 'Filter', import: 'GoFilter' },
