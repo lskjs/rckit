@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.27.0](https://github.com/lskjs/rckit/compare/v4.26.3...v4.27.0) (2024-01-08)
+
+
+### Features
+
+* **icons:** add info icon & exports refresh icon ([79b5a15](https://github.com/lskjs/rckit/commit/79b5a15534cbddeb98c736108cf1a4534906d8b0))
+
+
+
+
+
 ## [4.26.3](https://github.com/lskjs/rckit/compare/v4.26.2...v4.26.3) (2024-01-08)
 
 
