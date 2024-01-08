@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.32.0](https://github.com/lskjs/lskjs/compare/v4.31.0...v4.32.0) (2024-01-08)
+
+
+### Features
+
+* **icons:** add ruby icon ([5f93c4e](https://github.com/lskjs/lskjs/commit/5f93c4e3aec010c1ddaa572939300a10ebc8d790))
+
+
+
+
+
 # [4.31.0](https://github.com/lskjs/lskjs/compare/v4.30.0...v4.31.0) (2024-01-08)
 
 
