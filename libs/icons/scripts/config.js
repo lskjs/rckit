@@ -62,6 +62,7 @@ export const config = {
       person: { export: 'Person', import: 'GoPerson' },
       plus: { export: 'Plus', import: 'GoPlus' },
       refresh: { export: 'Refresh', import: 'GoSync' },
+      ruby: { export: 'Ruby', import: 'GoRuby' },
       search: { export: 'Search', import: 'GoSearch' },
       send: { export: 'Send', import: 'GoPaperAirplane' },
       share: { export: 'Share', import: 'GoShare' },

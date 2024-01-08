@@ -44,6 +44,7 @@ export * from './people';
 export * from './person';
 export * from './plus';
 export * from './refresh';
+export * from './ruby';
 export * from './search';
 export * from './send';
 export * from './share';
