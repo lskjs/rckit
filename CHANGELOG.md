@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.26.3](https://github.com/lskjs/rckit/compare/v4.26.2...v4.26.3) (2024-01-08)
+
+
+### Bug Fixes
+
+* **table:** empty objects ([4da9f69](https://github.com/lskjs/rckit/commit/4da9f6957537a19473e03c21fa6046d53d148073))
+
+
+
+
+
 ## [4.26.2](https://github.com/lskjs/rckit/compare/v4.26.1...v4.26.2) (2024-01-08)
 
 
