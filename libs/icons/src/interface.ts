@@ -26,6 +26,7 @@ export * from './eye';
 export * from './eyeClosed';
 export * from './fileMedia';
 export * from './filter';
+export * from './iterations';
 export * from './flame';
 export * from './gear';
 export * from './grabber';

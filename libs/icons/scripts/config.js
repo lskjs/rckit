@@ -44,6 +44,7 @@ export const config = {
       eyeClosed: { export: 'EyeClosed', import: 'GoEyeClosed' },
       fileMedia: { export: 'FileMedia', import: 'GoFileMedia' },
       filter: { export: 'Filter', import: 'GoFilter' },
+      iterations: { export: 'Iterations', import: 'GoIterations' },
       flame: { export: 'Flame', import: 'GoFlame' },
       gear: { export: 'Gear', import: 'GoGear' },
       grabber: { export: 'Grabber', import: 'GoGrabber' },
