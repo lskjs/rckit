@@ -6,10 +6,18 @@ import { Bot, Plus } from '@rckit/icons';
 import { AppNavbar } from '@rckit/navbar';
 import React from 'react';
 
+const heizenberg =
+  'Heizenberg-Heizenberg-Heizenberg-Heizenberg-Heizenberg-Heizenberg-Heizenberg-Heizenberg';
 //  'https://picsum.photos/32/32'
 const image = 'https://1.gravatar.com/userimage/22329978/9db05616feecdb0f41e9103fe8ffa075';
 
-const menus = ({ botId = 123, botTitle = 'The Bot', botAvatar } = {}) =>
+const menus = ({
+  botId = 123,
+  botTitle = 'The Bot',
+  botAvatar = image,
+  userName = 'Heizenberg',
+  userAvatar = image,
+} = {}) =>
   [
     {
       types: ['nav'],
@@ -36,46 +44,44 @@ const menus = ({ botId = 123, botTitle = 'The Bot', botAvatar } = {}) =>
         },
       ],
     },
-    botId
-      ? {
-          type: ['nav'],
-          title: botTitle || 'TheBot',
-          href: `/bots/${botId}`,
+    botId && {
+      type: ['nav'],
+      title: botTitle || 'TheBot',
+      href: `/bots/${botId}`,
+      image: botAvatar,
+      items: [
+        {
+          title: `${botTitle}  Dialogs`,
           image,
+          href: `/bots/${botId}/dialogs`,
+        },
+        {
+          image,
+          title: `${botTitle} Stats`,
+          href: `/bots/${botId}/stats`,
+        },
+        {
+          title: `${botTitle} Settings`,
+          image,
+          href: `/bots/${botId}/settings`,
           items: [
             {
-              title: `${botTitle}  Dialogs`,
+              title: `${botTitle} Settings2`,
               image,
-              href: `/bots/${botId}/dialogs`,
+              href: `/bots/${botId}/settings2`,
             },
             {
-              image,
-              title: `${botTitle} Stats`,
-              href: `/bots/${botId}/stats`,
+              title: `${botTitle} Settings3`,
+              href: `/bots/${botId}/settings3`,
             },
             {
-              title: `${botTitle} Settings`,
-              image,
-              href: `/bots/${botId}/settings`,
-              items: [
-                {
-                  title: `${botTitle} Settings2`,
-                  image,
-                  href: `/bots/${botId}/settings2`,
-                },
-                {
-                  title: `${botTitle} Settings3`,
-                  href: `/bots/${botId}/settings3`,
-                },
-                {
-                  title: `${botTitle} Settings4`,
-                  href: `/bots/${botId}/settings4`,
-                },
-              ],
+              title: `${botTitle} Settings4`,
+              href: `/bots/${botId}/settings4`,
             },
           ],
-        }
-      : null,
+        },
+      ],
+    },
     {
       types: ['nav'],
       title: 'Cabinet',
@@ -129,6 +135,44 @@ const menus = ({ botId = 123, botTitle = 'The Bot', botAvatar } = {}) =>
         },
       ],
     },
+    userName && {
+      type: ['admin'],
+      title: userName,
+      href: `/bots/${userName}`,
+      image: userAvatar,
+      items: [
+        {
+          title: `${botTitle}  Dialogs`,
+          image,
+          href: `/bots/${botId}/dialogs`,
+        },
+        {
+          image,
+          title: `${botTitle} Stats`,
+          href: `/bots/${botId}/stats`,
+        },
+        {
+          title: `${botTitle} Settings`,
+          image,
+          href: `/bots/${botId}/settings`,
+          items: [
+            {
+              title: `${botTitle} Settings2`,
+              image,
+              href: `/bots/${botId}/settings2`,
+            },
+            {
+              title: `${botTitle} Settings3`,
+              href: `/bots/${botId}/settings3`,
+            },
+            {
+              title: `${botTitle} Settings4`,
+              href: `/bots/${botId}/settings4`,
+            },
+          ],
+        },
+      ],
+    },
     {
       types: ['profile'],
       title: 'Profile',
@@ -144,7 +188,7 @@ const menus = ({ botId = 123, botTitle = 'The Bot', botAvatar } = {}) =>
 const session = {
   user: {
     id: 1,
-    name: 'John Smith',
+    name: heizenberg, // 'John Smith',
     avatar: image,
     role: 'admin',
   },
