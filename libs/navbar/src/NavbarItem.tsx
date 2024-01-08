@@ -29,13 +29,17 @@ export const NavbarItem = ({
 }: MenuItem & { imageSize?: number }) => (
   <>
     <NavbarItemWrap
-    // style={{
-    //   display: 'inline-flex',
-    //   alignItems: 'center',
-    //   justifyContent: 'center',
+      style={{
+        maxWidth: '100%',
+        overflow: 'hidden',
+      }}
+      // style={{
+      //   display: 'inline-flex',
+      //   alignItems: 'center',
+      //   justifyContent: 'center',
 
-    //   gap: 8,
-    // }}
+      //   gap: 8,
+      // }}
     >
       {Boolean(icon) && (
         <NavbarItemWrap inner style={{ marginRight: 8 }}>
@@ -43,7 +47,7 @@ export const NavbarItem = ({
         </NavbarItemWrap>
       )}
       {Boolean(image) && (
-        <NavbarItemWrap inner style={{ marginRight: 8 }}>
+        <NavbarItemWrap inner style={{ marginRight: 8, flexShrink: 0 }}>
           <Image
             // src={icon}
             src={image}
@@ -55,7 +59,10 @@ export const NavbarItem = ({
         </NavbarItemWrap>
       )}
       {Boolean(title) && (
-        <NavbarItemWrap inner style={{ marginRight: 2 }}>
+        <NavbarItemWrap
+          inner
+          style={{ marginRight: 2, textOverflow: 'ellipsis', overflow: 'hidden' }}
+        >
           {title}
         </NavbarItemWrap>
       )}
