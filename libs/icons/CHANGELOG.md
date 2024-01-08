@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.30.0](https://github.com/lskjs/lskjs/compare/v4.29.0...v4.30.0) (2024-01-08)
+
+
+### Features
+
+* **icons:** add stopwatch icon ([a7da16c](https://github.com/lskjs/lskjs/commit/a7da16c4d757f8bede1a7e93605efdfd47694666))
+
+
+
+
+
 # [4.29.0](https://github.com/lskjs/lskjs/compare/v4.28.0...v4.29.0) (2024-01-08)
 
 

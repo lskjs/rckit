@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.30.0](https://github.com/lskjs/lskjs/compare/v4.29.0...v4.30.0) (2024-01-08)
+
+**Note:** Version bump only for package @rckit/breadcrumbs
+
+
+
+
+
 # [4.29.0](https://github.com/lskjs/lskjs/compare/v4.28.0...v4.29.0) (2024-01-08)
 
 **Note:** Version bump only for package @rckit/breadcrumbs
