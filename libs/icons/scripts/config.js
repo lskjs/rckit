@@ -70,6 +70,7 @@ export const config = {
       skip: { export: 'Skip', import: 'GoSkip' },
       sortAsc: { export: 'SortAsc', import: 'GoSortAsc' },
       sortDesc: { export: 'SortDesc', import: 'GoSortDesc' },
+      stopwatch: { export: 'Stopwatch', import: 'GoStopwatch' },
       sun: { export: 'Sun', import: 'GoSun' },
       tag: { export: 'Tag', import: 'GoTag' },
       tools: { export: 'Tools', import: 'GoTools' },

@@ -52,6 +52,7 @@ export * from './sidebarExpand';
 export * from './skip';
 export * from './sortAsc';
 export * from './sortDesc';
+export * from './stopwatch';
 export * from './sun';
 export * from './tag';
 export * from './tools';
