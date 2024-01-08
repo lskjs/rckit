@@ -55,5 +55,6 @@ export * from './sortDesc';
 export * from './stopwatch';
 export * from './sun';
 export * from './tag';
+export * from './terminal';
 export * from './tools';
 export * from './trash';

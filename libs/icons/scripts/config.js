@@ -73,6 +73,7 @@ export const config = {
       stopwatch: { export: 'Stopwatch', import: 'GoStopwatch' },
       sun: { export: 'Sun', import: 'GoSun' },
       tag: { export: 'Tag', import: 'GoTag' },
+      terminal: { export: 'Terminal', import: 'GoTerminal' },
       tools: { export: 'Tools', import: 'GoTools' },
       trash: { export: 'Trash', import: 'GoTrash' },
     },
