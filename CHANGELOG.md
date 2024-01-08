@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.29.0](https://github.com/lskjs/rckit/compare/v4.28.0...v4.29.0) (2024-01-08)
+
+
+### Features
+
+* **icons:** add image icon ([30e1fbf](https://github.com/lskjs/rckit/commit/30e1fbfd59cefa944e1e828aef8b89acb18f18ea))
+* **icons:** add note icon ([083c12d](https://github.com/lskjs/rckit/commit/083c12d3bc012629e3e6b2f6ab100e73a9177f37))
+
+
+
+
+
 # [4.28.0](https://github.com/lskjs/rckit/compare/v4.27.0...v4.28.0) (2024-01-08)
 
 
