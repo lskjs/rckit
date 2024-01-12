@@ -18,7 +18,7 @@ export function AuthLoginForm({ onSubmit }: AuthLoginFormProps) {
   });
 
   return (
-    <Form onSubmit={onSmartSubmit} className="row g-3">
+    <Form data-testid="login" onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
         <FormItem id="email" label="Email" error={formState.errors.email?.message} required>
           <Form.Control
@@ -29,7 +29,7 @@ export function AuthLoginForm({ onSubmit }: AuthLoginFormProps) {
       </Col>
       <Col lg={12}>
         <div className="form-text text-end" style={{ marginBottom: -22 }}>
-          <Link href="/auth/restore" tabIndex={-1}>
+          <Link data-testid="restore-link" href="/auth/restore" tabIndex={-1}>
             Forgot password?
           </Link>
         </div>

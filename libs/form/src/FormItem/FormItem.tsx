@@ -31,7 +31,9 @@ export function FormItem({
       <div id={id} className="form-control-wrap">
         {children}
       </div>
-      <Form.Text className="text-danger">{error}</Form.Text>
+      <Form.Text data-testid={`${id}-error`} className="text-danger">
+        {error}
+      </Form.Text>
     </Form.Group>
   );
 }

@@ -20,7 +20,7 @@ export function AuthResetPasswordForm({ defaultValues, onSubmit }: AuthResetPass
   });
 
   return (
-    <Form onSubmit={onSmartSubmit} className="row g-3">
+    <Form data-testid="reset" onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
         <Form.Control type="hidden" {...register('otpId')} />
         <FormItem id="code" label="Code" error={formState.errors.code?.message} required>

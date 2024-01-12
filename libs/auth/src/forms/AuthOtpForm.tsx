@@ -16,7 +16,7 @@ export function AuthOtpForm({ onSubmit }: AuthOtpFormProps) {
     onSubmit,
   });
   return (
-    <Form onSubmit={onSmartSubmit} className="row g-3">
+    <Form data-testid="otp" onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
         {/* <Debug>
           <OTPInput

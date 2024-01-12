@@ -18,7 +18,7 @@ export function AuthWebappSignupForm({ onSubmit }: AuthWebappSignupFormProps) {
   });
 
   return (
-    <Form onSubmit={onSmartSubmit} className="row g-3">
+    <Form data-testid="webapp" onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
         <FormItem id="email" label="Email" error={formState.errors.email?.message} required>
           <Form.Control
@@ -36,7 +36,13 @@ export function AuthWebappSignupForm({ onSubmit }: AuthWebappSignupFormProps) {
             label={
               <span>
                 I agree to the{' '}
-                <Link href="/links/tos" target="_blank" rel="noopener noreferrer" tabIndex={-1}>
+                <Link
+                  data-testid="tos-link"
+                  href="/links/tos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabIndex={-1}
+                >
                   Terms of Service
                 </Link>
               </span>
@@ -45,7 +51,9 @@ export function AuthWebappSignupForm({ onSubmit }: AuthWebappSignupFormProps) {
             {...register('tos', { required: 'You must agree to the Terms of Service' })}
           />
           {formState.errors.tos && (
-            <Form.Text className="text-danger">{formState.errors.tos?.message}</Form.Text>
+            <Form.Text data-testid="tos-error" className="text-danger">
+              {formState.errors.tos?.message}
+            </Form.Text>
           )}
         </Form.Group>
       </Col>
