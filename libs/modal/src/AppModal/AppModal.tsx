@@ -20,16 +20,21 @@ export const AppModal = ({ children }: any) => {
 
   const Wrapper = modalState?.wrapper || React.Fragment;
   const wrapperProps = modalState?.wrapperProps || {};
+  const size = modalState?.size || 'xl';
+  const centered = modalState?.centered ?? true;
+  const closable = modalState?.closable ?? true;
   return (
     <AppModalContext.Provider value={payload}>
       {children}
-      <Modal size="xl" centered show={!!modalState} onHide={closeModal}>
+      <Modal size={size} centered={centered} show={!!modalState} onHide={closeModal}>
         <Wrapper {...wrapperProps}>
-          <Modal.Header closeButton>
-            <Modal.Title>{modalState?.title}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{modalState?.body}</Modal.Body>
-          <Modal.Footer>{modalState?.footer}</Modal.Footer>
+          {(modalState?.title || closable) && (
+            <Modal.Header closeButton={closable}>
+              <Modal.Title>{modalState?.title}</Modal.Title>
+            </Modal.Header>
+          )}
+          {modalState?.body && <Modal.Body>{modalState?.body}</Modal.Body>}
+          {modalState?.footer && <Modal.Footer>{modalState?.footer}</Modal.Footer>}
         </Wrapper>
       </Modal>
       <ToastContainer

@@ -6,6 +6,9 @@ export interface ModalProps {
   title?: string | React.ReactNode;
   body?: string | React.ReactNode;
   footer?: string | React.ReactNode;
+  size?: 'sm' | 'lg' | 'xl';
+  centered?: boolean;
+  closable?: boolean;
 }
 
 export interface AppModalType {}
