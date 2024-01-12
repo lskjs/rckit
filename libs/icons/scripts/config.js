@@ -60,6 +60,7 @@ export const config = {
       pencil: { export: 'Pencil', import: 'GoPencil' },
       people: { export: 'People', import: 'GoPeople' },
       person: { export: 'Person', import: 'GoPerson' },
+      plug: { export: 'Plug', import: 'GoPlug' },
       plus: { export: 'Plus', import: 'GoPlus' },
       refresh: { export: 'Refresh', import: 'GoSync' },
       ruby: { export: 'Ruby', import: 'GoRuby' },

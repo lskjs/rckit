@@ -42,6 +42,7 @@ export * from './paste';
 export * from './pencil';
 export * from './people';
 export * from './person';
+export * from './plug';
 export * from './plus';
 export * from './refresh';
 export * from './ruby';
