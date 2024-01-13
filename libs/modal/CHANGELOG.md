@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.33.0](https://github.com/lskjs/lskjs/compare/v4.32.0...v4.33.0) (2024-01-13)
+
+
+### Features
+
+* **modal:** add more props customisation for modal ([0bfa954](https://github.com/lskjs/lskjs/commit/0bfa9548c10c30550ecc27a54bb12943861a16dd))
+
+
+
+
+
 # [4.20.0](https://github.com/lskjs/lskjs/compare/v4.19.0...v4.20.0) (2023-12-25)
 
 

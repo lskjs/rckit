@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.33.0](https://github.com/lskjs/lskjs/compare/v4.32.0...v4.33.0) (2024-01-13)
+
+
+### Features
+
+* **icons:** add plug icon ([ae03073](https://github.com/lskjs/lskjs/commit/ae03073fc494d47a901c2d45e521ec255e6e19fb))
+
+
+
+
+
 # [4.32.0](https://github.com/lskjs/lskjs/compare/v4.31.0...v4.32.0) (2024-01-08)
 
 

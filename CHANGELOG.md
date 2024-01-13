@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.33.0](https://github.com/lskjs/rckit/compare/v4.32.0...v4.33.0) (2024-01-13)
+
+
+### Features
+
+* **auth:** improve types useAppUser ([51f19f0](https://github.com/lskjs/rckit/commit/51f19f0bbc956b21f47e39d1edf7f3125d918b69))
+* **icons:** add plug icon ([ae03073](https://github.com/lskjs/rckit/commit/ae03073fc494d47a901c2d45e521ec255e6e19fb))
+* **modal:** add more props customisation for modal ([0bfa954](https://github.com/lskjs/rckit/commit/0bfa9548c10c30550ecc27a54bb12943861a16dd))
+
+
+
+
+
 # [4.32.0](https://github.com/lskjs/rckit/compare/v4.31.0...v4.32.0) (2024-01-08)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.33.0](https://github.com/lskjs/lskjs/compare/v4.32.0...v4.33.0) (2024-01-13)
+
+
+### Features
+
+* **auth:** improve types useAppUser ([51f19f0](https://github.com/lskjs/lskjs/commit/51f19f0bbc956b21f47e39d1edf7f3125d918b69))
+
+
+
+
+
 ## [4.25.1](https://github.com/lskjs/lskjs/compare/v4.25.0...v4.25.1) (2024-01-04)
 
 
