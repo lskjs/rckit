@@ -14,14 +14,14 @@
   "dependencies": {
     "@lsk4/env": "^4.6.0",
     "@lsk4/err": "^4.5.0",
-    "@lsk4/log": "^4.7.0"
+    "@lsk4/log": "^4.8.0"
   },
   "devDependencies": {
-    "@types/node": "^20.10.5",
-    "@types/react": "^18.2.45",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.2",
-    "react-hook-form": "^7.49.2"
+    "react-hook-form": "^7.49.3"
   },
   "peerDependencies": {
     "react": "*",

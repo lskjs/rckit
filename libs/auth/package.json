@@ -15,7 +15,7 @@
     "@lsk4/algos": "^4.5.0",
     "@lsk4/env": "^4.6.0",
     "@lsk4/err": "^4.5.0",
-    "@lsk4/log": "^4.7.0",
+    "@lsk4/log": "^4.8.0",
     "@rckit/api-client": "workspace:^",
     "@rckit/debug": "workspace:^",
     "@rckit/form": "workspace:^",
@@ -23,8 +23,8 @@
     "fishbird": "^1.1.8"
   },
   "devDependencies": {
-    "@types/node": "^20.10.5",
-    "@types/react": "^18.2.45",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.2",
     "use-local-storage-state": "^18.3.3"

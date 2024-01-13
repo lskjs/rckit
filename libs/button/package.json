@@ -19,7 +19,7 @@
     "@rckit/secret-checkbox": "workspace:^"
   },
   "devDependencies": {
-    "@types/react": "^18.2.45",
+    "@types/react": "^18.2.47",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.2"
   },

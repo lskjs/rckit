@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@lsk4/algos": "^4.5.0",
-    "@types/react": "^18.2.45",
+    "@types/react": "^18.2.47",
     "react": "^18.2.0",
     "react-icons": "^4.12.0"
   },
