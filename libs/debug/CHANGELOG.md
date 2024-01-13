@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.33.1](https://github.com/lskjs/lskjs/compare/v4.33.0...v4.33.1) (2024-01-13)
+
+**Note:** Version bump only for package @rckit/debug
+
+
+
+
+
 # [4.20.0](https://github.com/lskjs/lskjs/compare/v4.19.0...v4.20.0) (2023-12-25)
 
 
