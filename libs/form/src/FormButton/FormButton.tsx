@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button as ReactBootstrapButton } from 'react-bootstrap';
 
+import { ProgressIcon } from '../icons/ProgressIcon';
 import { useFormButtonState } from './useFormButtonState';
 
 const templates = {
@@ -9,7 +10,7 @@ const templates = {
     variant: 'primary',
   },
   progress: {
-    text: 'Submiting...',
+    text: <ProgressIcon width="24" height="24" />,
     variant: 'primary',
   },
   error: {
