@@ -19,7 +19,7 @@ export function AuthSignupForm({ onSubmit }: AuthSignupFormProps) {
   });
 
   return (
-    <Form data-testid="signup" onSubmit={onSmartSubmit} className="row g-3">
+    <Form data-testid="signup-form" onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
         <FormItem id="email" label="Email" error={formState.errors.email?.message} required>
           <Form.Control

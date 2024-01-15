@@ -18,7 +18,7 @@ export function AuthLoginForm({ onSubmit }: AuthLoginFormProps) {
   });
 
   return (
-    <Form data-testid="login" onSubmit={onSmartSubmit} className="row g-3">
+    <Form data-testid="login-form" onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
         <FormItem id="email" label="Email" error={formState.errors.email?.message} required>
           <Form.Control
