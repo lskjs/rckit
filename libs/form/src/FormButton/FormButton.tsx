@@ -25,7 +25,7 @@ const templates = {
 export const FormButton = ({ formState, children, ...props }: any) => {
   const status = useFormButtonState(formState) || 'default';
   const template = templates[status] || templates.default;
-  const text = children || template.text || templates.default.text;
+  const text = status === 'default' ? children || templates.default.text : template.text;
   const variant = template?.variant || templates.default.variant;
   return (
     <ReactBootstrapButton
