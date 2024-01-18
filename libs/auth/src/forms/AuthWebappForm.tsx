@@ -3,6 +3,7 @@ import { Link } from '@rckit/link';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
+import { errors } from '../errors';
 import { FormError } from './FormError';
 
 export interface AuthWebappSignupFormValues {
@@ -24,7 +25,7 @@ export function AuthWebappSignupForm({ onSubmit }: AuthWebappSignupFormProps) {
           <Form.Control
             type="email"
             // placeholder="youremail@example.com"
-            {...register('email', { required: 'Email cannot be blank' })}
+            {...register('email', { required: errors.blankEmail })}
           />
         </FormItem>
       </Col>
@@ -42,7 +43,7 @@ export function AuthWebappSignupForm({ onSubmit }: AuthWebappSignupFormProps) {
               </span>
             }
             isInvalid={Boolean(formState.errors.tos)}
-            {...register('tos', { required: 'You must agree to the Terms of Service' })}
+            {...register('tos', { required: errors.blankTos })}
           />
           {formState.errors.tos && (
             <Form.Text className="text-danger">{formState.errors.tos?.message}</Form.Text>

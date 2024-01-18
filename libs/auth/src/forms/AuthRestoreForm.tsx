@@ -2,6 +2,7 @@ import { FormButton, FormItem, useSmartForm } from '@rckit/form';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
+import { errors } from '../errors';
 import { FormError } from './FormError';
 
 export interface AuthRestoreFormValues {
@@ -19,10 +20,7 @@ export function AuthRestoreForm({ onSubmit }: AuthRestoreFormProps) {
     <Form onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
         <FormItem id="email" label="Email" error={formState.errors.email?.message} required>
-          <Form.Control
-            type="email"
-            {...register('email', { required: 'Email cannot be black' })}
-          />
+          <Form.Control type="email" {...register('email', { required: errors.blankEmail })} />
         </FormItem>
       </Col>
       <Col lg={12}>

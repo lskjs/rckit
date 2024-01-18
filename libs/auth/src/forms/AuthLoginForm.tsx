@@ -3,6 +3,7 @@ import { Link } from '@rckit/link';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
+import { errors } from '../errors';
 import { FormError } from './FormError';
 
 export interface AuthLoginFormValues {
@@ -21,10 +22,7 @@ export function AuthLoginForm({ onSubmit }: AuthLoginFormProps) {
     <Form onSubmit={onSmartSubmit} className="row g-3">
       <Col lg={12}>
         <FormItem id="email" label="Email" error={formState.errors.email?.message} required>
-          <Form.Control
-            type="email"
-            {...register('email', { required: 'Email cannot be black' })}
-          />
+          <Form.Control type="email" {...register('email', { required: errors.blankEmail })} />
         </FormItem>
       </Col>
       <Col lg={12}>
@@ -41,7 +39,7 @@ export function AuthLoginForm({ onSubmit }: AuthLoginFormProps) {
         >
           <Form.Control
             type="password"
-            {...register('password', { required: 'Password cannot be black' })}
+            {...register('password', { required: errors.blankPassword })}
           />
         </FormItem>
       </Col>
