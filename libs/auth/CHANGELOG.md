@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.34.1](https://github.com/lskjs/lskjs/compare/v4.34.0...v4.34.1) (2024-01-26)
+
+**Note:** Version bump only for package @rckit/auth
+
+
+
+
+
 # [4.34.0](https://github.com/lskjs/lskjs/compare/v4.33.1...v4.34.0) (2024-01-26)
 
 
