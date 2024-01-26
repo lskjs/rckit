@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import { isDev } from '@lsk4/env';
-import { useAppConfig } from '@rckit/auth';
+import { useAppConfig } from '@rckit/config';
 import { SecretCheckbox } from '@rckit/secret-checkbox';
 import React from 'react';
 import { Nav } from 'react-bootstrap';

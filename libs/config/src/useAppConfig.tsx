@@ -1,3 +1,4 @@
+import { isDev } from '@lsk4/env';
 import { createContext, Dispatch, SetStateAction, useContext } from 'react';
 
 export interface AppConfigType {
@@ -6,7 +7,7 @@ export interface AppConfigType {
 }
 
 export const defaultAppConfig: AppConfigType = {
-  isDebug: false,
+  isDebug: isDev,
   theme: 'light',
 };
 
