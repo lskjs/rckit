@@ -2,6 +2,7 @@ import { FormButton, FormItem, useSmartForm } from '@rckit/form';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
+import { errors } from '../errors';
 import { FormError } from './FormError';
 
 export interface AuthResetPasswordFormValues {
@@ -24,7 +25,7 @@ export function AuthResetPasswordForm({ defaultValues, onSubmit }: AuthResetPass
       <Col lg={12}>
         <Form.Control type="hidden" {...register('otpId')} />
         <FormItem id="code" label="Code" error={formState.errors.code?.message} required>
-          <Form.Control type="code" {...register('code', { required: 'Code cannot be blank' })} />
+          <Form.Control type="code" {...register('code', { required: errors.blankCode })} />
         </FormItem>
         <FormItem
           id="password"
@@ -34,7 +35,7 @@ export function AuthResetPasswordForm({ defaultValues, onSubmit }: AuthResetPass
         >
           <Form.Control
             type="password"
-            {...register('newPassword', { required: 'Password cannot be black' })}
+            {...register('newPassword', { required: errors.blankPassword })}
           />
         </FormItem>
       </Col>

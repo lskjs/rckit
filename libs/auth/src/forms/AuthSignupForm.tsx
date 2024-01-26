@@ -3,6 +3,7 @@ import { Link } from '@rckit/link';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
+import { errors } from '../errors';
 import { FormError } from './FormError';
 
 export interface AuthSignupFormValues {
@@ -25,7 +26,7 @@ export function AuthSignupForm({ onSubmit }: AuthSignupFormProps) {
           <Form.Control
             type="email"
             // placeholder="youremail@example.com"
-            {...register('email', { required: 'Email cannot be blank' })}
+            {...register('email', { required: errors.blankEmail })}
           />
         </FormItem>
       </Col>
@@ -39,7 +40,7 @@ export function AuthSignupForm({ onSubmit }: AuthSignupFormProps) {
           <Form.Control
             type="password"
             // placeholder="password"
-            {...register('password', { required: 'Password cannot be blank' })}
+            {...register('password', { required: errors.blankPassword })}
           />
         </FormItem>
       </Col>
@@ -63,7 +64,7 @@ export function AuthSignupForm({ onSubmit }: AuthSignupFormProps) {
               </span>
             }
             isInvalid={Boolean(formState.errors.tos)}
-            {...register('tos', { required: 'You must agree to the Terms of Service' })}
+            {...register('tos', { required: errors.blankTos })}
           />
           {formState.errors.tos && (
             <Form.Text data-testid="tos-error" className="text-danger">

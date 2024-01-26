@@ -3,6 +3,7 @@ import { FormButton, FormItem, useSmartForm } from '@rckit/form';
 import React from 'react';
 import { Col, Form } from 'react-bootstrap';
 
+import { errors } from '../errors';
 import { FormError } from './FormError';
 
 export interface AuthOtpFormValues {
@@ -47,7 +48,7 @@ export function AuthOtpForm({ onSubmit }: AuthOtpFormProps) {
             <Form.Control
               type="code"
               // placeholder="1234"
-              {...register('code', { required: 'Code cannot be blank' })}
+              {...register('code', { required: errors.blankCode })}
             />
           </FormItem>
         </Col>
