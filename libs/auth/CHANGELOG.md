@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.34.0](https://github.com/lskjs/lskjs/compare/v4.33.1...v4.34.0) (2024-01-26)
+
+
+### Bug Fixes
+
+* **SEN-82:** ids for forms ([228c597](https://github.com/lskjs/lskjs/commit/228c597e72f3efcf93a4279f4076517d75847ca3))
+
+
+### Features
+
+* **config:** separate config from auth package ([e6dd1b5](https://github.com/lskjs/lskjs/commit/e6dd1b5709444c89a48f598183595d5a3ce7e938))
+* **SEN-59:** form errors ([ad49c92](https://github.com/lskjs/lskjs/commit/ad49c9282f9e047786d3b250238fe082b31f352a))
+* **SEN-82:** add data test ids for forms ([cb1dc83](https://github.com/lskjs/lskjs/commit/cb1dc83d50bb9f1654654dc022c7c1593398822e))
+
+
+
+
+
 ## [4.33.1](https://github.com/lskjs/lskjs/compare/v4.33.0...v4.33.1) (2024-01-13)
 
 **Note:** Version bump only for package @rckit/auth

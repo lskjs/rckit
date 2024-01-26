@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.34.0](https://github.com/lskjs/lskjs/compare/v4.33.1...v4.34.0) (2024-01-26)
+
+
+### Features
+
+* **SEN-82:** add data test ids for forms ([cb1dc83](https://github.com/lskjs/lskjs/commit/cb1dc83d50bb9f1654654dc022c7c1593398822e))
+
+
+
+
+
 ## [4.33.1](https://github.com/lskjs/lskjs/compare/v4.33.0...v4.33.1) (2024-01-13)
 
 **Note:** Version bump only for package @rckit/form

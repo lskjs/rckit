@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.34.0](https://github.com/lskjs/lskjs/compare/v4.33.1...v4.34.0) (2024-01-26)
+
+
+### Features
+
+* **config:** separate config from auth package ([e6dd1b5](https://github.com/lskjs/lskjs/commit/e6dd1b5709444c89a48f598183595d5a3ce7e938))
+
+
+
+
+
 ## [4.33.1](https://github.com/lskjs/lskjs/compare/v4.33.0...v4.33.1) (2024-01-13)
 
 **Note:** Version bump only for package @rckit/debug

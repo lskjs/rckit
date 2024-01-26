@@ -1,6 +1,6 @@
 {
   "name": "@rckit/navbar",
-  "version": "4.33.1",
+  "version": "4.34.0",
   "description": "LSK.js – nest auth – helpers for auth in Nest.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -16,9 +16,9 @@
     "@rckit/auth": "workspace:^",
     "@rckit/avatar": "workspace:^",
     "@rckit/breadcrumbs": "workspace:^",
+    "@rckit/config": "workspace:^",
     "@rckit/link": "workspace:^",
-    "@rckit/secret-checkbox": "workspace:^",
-    "@rckit/config": "workspace:^"
+    "@rckit/secret-checkbox": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.47",
