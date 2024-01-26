@@ -1,10 +1,8 @@
 /* eslint-disable no-nested-ternary */
-import { isDev } from '@lsk4/env';
+import { useAppConfig } from '@rckit/config';
 import React from 'react';
 
 import { Zebra } from './Zebra';
-
-const useAppConfig = () => ({ isDebug: isDev });
 
 interface DebugProps {
   as?: React.ElementType;

@@ -12,6 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
+    "@rckit/config": "workspace:^",
     "@lsk4/env": "^4.6.0"
   },
   "devDependencies": {
