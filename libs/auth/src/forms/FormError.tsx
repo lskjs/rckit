@@ -6,5 +6,9 @@ export interface FormErrorProps {
 }
 export function FormError({ formState, name = 'root' }: FormErrorProps) {
   const message = formState.errors[name]?.message || <br />;
-  return <div className="text-center form-text text-danger">{message}</div>;
+  return (
+    <div data-testid="form-error" className="text-center form-text text-danger">
+      {message}
+    </div>
+  );
 }
